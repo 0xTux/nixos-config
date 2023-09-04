@@ -1,4 +1,4 @@
-# tux's NixOS configuration flake
+# NixOS configuration flake
 
 ## Installation
 
