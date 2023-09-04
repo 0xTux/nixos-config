@@ -3,7 +3,7 @@
 ## Installation
 
 Currently there is 1 host:
-1. esoteric
+1. sirius
    - UEFI boot w/ systemd-boot
 
 Hosts can be build with:
