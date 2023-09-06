@@ -44,7 +44,7 @@
         user = {
           email = "0xtux@pm.me";
           name = "0xTux";
-          signingkey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL+OzPUe2ECPC929DqpkM39tl/vdNAXfsRnmrGfR+X3D 0xtux@pm.me";
+          signingkey = "~/.ssh/tux.pub";
         };
         commit.gpgsign = true;
         gpg.format = "ssh";
