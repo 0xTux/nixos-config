@@ -6,6 +6,8 @@
       ../modules/virtualisation/docker.nix
     ];
 
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   fonts.fonts = with pkgs; [
     (nerdfonts.override { fonts = [ "FiraCode" ]; })
   ];
