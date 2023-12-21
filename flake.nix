@@ -61,6 +61,26 @@
           ];
         };
 
+        controller = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs outputs username; };
+          modules = [
+            ./hosts/controller
+            ./modules/nixos/headscale.nix
+
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useUserPackages = true;
+              home-manager.extraSpecialArgs = { inherit inputs outputs username; };
+              home-manager.users.${username} = {
+                imports = [
+                  ./modules/home-manager
+                  ./home/tux
+                ];
+              };
+            }
+          ];
+        };
+
         wsl = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs username; };
           modules = [
