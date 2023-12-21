@@ -30,9 +30,9 @@ sudo nixos-rebuild switch --flake .#<HOSTNAME>
 | Bar           | /          | Wibar            |
 | Hotkeys       | /          | Awful            |
 | Launcher      | /          | Rofi             |
-| Notifications | Dunst      | Naughty          |
-| Terminal      | Alacritty  | Alacritty        |
-| Editor        | Neovim     | Neovim           |
+| Notifications | /          | Naughty          |
+| Terminal      | /          | Alacritty        |
+| Editor        | /          | Neovim           |
 
 **Spent weeks on this system configuration 😢**
 
