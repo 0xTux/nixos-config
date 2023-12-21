@@ -8,11 +8,13 @@
 
 ## Installation
 
-Currently there is 1 host:
-1. canopus
-   - UEFI boot w/ systemd-boot
-2. wsl
+Currently there are 3 host's:
+1. **canopus**
+   - Asus Zephyrus G15
+2. **wsl**
    - Windows Subsytem for Linux
+3. **controller**
+   - Hetzner VPS
 
 Hosts can be build with:
 
@@ -22,17 +24,17 @@ sudo nixos-rebuild switch --flake .#<HOSTNAME>
 
 ## Components
 
-|               | Wayland    | Xorg             |
-|---------------|------------|------------------|
-| DM            | /          | SDDM             |
-| WM/DE         | /          | AwesomeWM        |
-| Compositor    | /          | Picom (Jonaburg) |
-| Bar           | /          | Wibar            |
-| Hotkeys       | /          | Awful            |
-| Launcher      | /          | Rofi             |
-| Notifications | /          | Naughty          |
-| Terminal      | /          | Alacritty        |
-| Editor        | /          | Neovim           |
+|               | Wayland | Xorg             |
+| ------------- | ------- | ---------------- |
+| DM            | /       | SDDM             |
+| WM/DE         | /       | AwesomeWM        |
+| Compositor    | /       | Picom (Jonaburg) |
+| Bar           | /       | Wibar            |
+| Hotkeys       | /       | Awful            |
+| Launcher      | /       | Rofi             |
+| Notifications | /       | Naughty          |
+| Terminal      | /       | Alacritty        |
+| Editor        | /       | Neovim           |
 
 **Spent weeks on this system configuration 😢**
 
