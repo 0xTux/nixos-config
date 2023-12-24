@@ -5,6 +5,7 @@
 </h1>
 
 # NixOS configuration flake
+![desktop](https://github.com/0xTux/nixos-config/assets/97862450/0c24b770-027d-41a8-ba15-19069e8068cc)
 
 ## Installation
 
