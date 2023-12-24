@@ -7,7 +7,7 @@
       local config = {}
 
       config.window_close_confirmation = 'NeverPrompt'
-      config.color_scheme = 'Gruvbox Dark (Gogh)'
+      config.color_scheme = 'Gruvbox dark, hard (base16)'
       config.colors = {
         background = "#0f0f0f"
       }

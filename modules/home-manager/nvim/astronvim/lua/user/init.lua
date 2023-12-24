@@ -78,6 +78,15 @@ M.plugins = {
 	{ import = "astrocommunity.colorscheme.nightfox-nvim" },
 	{ import = "astrocommunity.colorscheme.gruvbox-baby" },
 	{
+		"gruvbox-baby",
+		config = function()
+			vim.g.gruvbox_baby_background_color = "dark"
+			vim.g.gruvbox_baby_color_overrides = {
+				background = "#0f0f0f",
+			}
+		end,
+	},
+	{
 		"nightfox.nvim",
 		opts = {
 			options = {
