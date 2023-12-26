@@ -36,7 +36,6 @@
   environment.systemPackages = with pkgs;[
     lua53Packages.lua
     wezterm
-    rofi
     acpi
     linuxKernel.packages.linux_zen.acpi_call
     lxappearance

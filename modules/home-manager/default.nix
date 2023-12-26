@@ -6,6 +6,7 @@
     ./alacritty
     ./wezterm
     ./starship
+    ./rofi
     ./nvim
     ./barrier
     ./firefox
