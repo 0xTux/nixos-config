@@ -19,6 +19,7 @@
             ldbus
             luadbi-mysql
             luaposix
+            dkjson
             ;
         };
       };
