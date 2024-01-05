@@ -6,5 +6,7 @@
     vlc
     darktable
     rawtherapee
+    beekeeper-studio
+    arandr
   ];
 }
