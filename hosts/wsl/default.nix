@@ -13,6 +13,7 @@
   programs = {
     zsh.enable = true;
     nix-ld.enable = true;
+    dconf.enable = true;
   };
 
   users = {
