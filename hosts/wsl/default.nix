@@ -16,6 +16,10 @@
     dconf.enable = true;
   };
 
+  services = {
+    ollama.enable = true;
+  };
+
   users = {
     defaultUserShell = pkgs.zsh;
     users.${username} = {
@@ -28,9 +32,7 @@
     };
   };
 
-  environment.systemPackages = with pkgs;[
-    ollama
-  ];
+  environment.systemPackages = with pkgs;[ ];
 
   fonts.packages = with pkgs; [ (nerdfonts.override { fonts = [ "FiraCode" "JetBrainsMono" ]; }) ];
 

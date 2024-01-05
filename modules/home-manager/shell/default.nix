@@ -50,7 +50,6 @@
     rustc
     cargo
     bun
-    ollama
     stremio
     nixpkgs-fmt
     flyctl
