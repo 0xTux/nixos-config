@@ -10,7 +10,7 @@
     ./nvim
     ./barrier
     ./firefox
-    ./bitwarden
+    # ./bitwarden
   ];
 
   nixpkgs = {
