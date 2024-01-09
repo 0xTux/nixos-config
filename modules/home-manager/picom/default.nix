@@ -11,7 +11,9 @@
 
     settings = {
       experimental-backend = true;
-      backend = "xrender";
+      backend = "glx";
+      glx-no-stencil = true;
+      glx-copy-from-font = false;
       use-damage = false;
 
       corner-radius = 0;
