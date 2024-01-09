@@ -44,6 +44,7 @@
     copyq
     zellij
     cht-sh
+    nix-output-monitor
 
     python311
     nodejs
