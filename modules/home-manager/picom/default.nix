@@ -1,7 +1,6 @@
 { config, pkgs, ... }: {
   services.picom = {
-    enable = false;
-    extraArgs = [ "--animations" ];
+    enable = true;
 
     fade = true;
     fadeDelta = 5;
@@ -11,32 +10,37 @@
     ];
 
     settings = {
-      backend = "glx";
+      experimental-backend = true;
+      backend = "xrender";
       use-damage = false;
 
-      corner-radius = 12;
+      corner-radius = 0;
 
-      animation-stiffness = 300;
-      animation-window-mass = 1.3;
-      animation-dampening = 35;
+      animations = true;
+      animation-stiffness = 500;
+      animation-window-mass = 1.0;
+      animation-dampening = 26;
+      animation-delta = 10;
+      animation-force_steps = false;
       animation-clamping = true;
 
-      animation-for-open-window = "zoom";
+      animation-for-open-window = "slide-up";
       animation-for-menu-window = "slide-down";
       animation-for-transient-window = "slide-down";
-      animation-for-prev-tag = "zoom";
+      animation-for-unmap-window = "slide-up";
+      animation-for-prev-tag = "slide-left";
       enable-fading-prev-tag = true;
-      animation-for-next-tag = "zoom";
+      animation-for-next-tag = "slide-right";
       enable-fading-next-tag = true;
 
-      shadow = true;
+      shadow = false;
       shadow-radius = 20;
       shadow-offset-x = -20;
       shadow-offset-y = -18;
 
       no-fading-openclose = false;
 
-      vsync = false;
+      vsync = true;
     };
   };
 }
