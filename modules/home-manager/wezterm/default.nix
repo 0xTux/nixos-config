@@ -15,7 +15,7 @@
       config.font = wezterm.font_with_fallback {
         'FiraCode Nerd Font',
       }
-      config.font_size = 18.0
+      config.font_size = 16.0
       config.window_background_opacity = 1
       config.window_padding = {
         left = '20px',
