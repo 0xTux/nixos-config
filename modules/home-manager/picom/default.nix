@@ -33,6 +33,10 @@
       animation-for-next-tag = "slide-right";
       enable-fading-next-tag = true;
 
+      active-opacity = 0.95;
+      inactive-opacity = 0.95;
+      opacity-rule = [ "100:class_g = 'firefox'" ];
+
       shadow = false;
       shadow-radius = 20;
       shadow-offset-x = -20;
