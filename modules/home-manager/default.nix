@@ -10,6 +10,7 @@
     ./nvim
     ./barrier
     ./firefox
+    ./kdeconnect
     # ./bitwarden
   ];
 
