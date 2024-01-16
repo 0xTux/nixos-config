@@ -12,7 +12,6 @@
     #});
 
     awesome = inputs.nixpkgs-f2k.packages.${prev.system}.awesome-git.override { lua = prev.lua53Packages.lua; };
-    picom = inputs.nixpkgs-f2k.packages.${prev.system}.picom-pijulius;
   };
 
   # When applied, the unstable nixpkgs set (declared in the flake inputs) will
