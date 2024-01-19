@@ -162,12 +162,46 @@
 
     blueman.enable = true;
 
-    supergfxd.enable = true;
+    supergfxd = {
+      enable = true;
+      settings = {
+        mode = "Integrated";
+        vfio_enable = false;
+        vfio_save = false;
+        always_reboot = false;
+        no_logind = false;
+        logout_timeout_s = 180;
+        hotplug_type = "None";
+      };
+    };
 
     asusd = {
       enable = true;
       enableUserService = true;
-      asusdConfig = "bat_charge_limit: 80";
+      asusdConfig = ''
+        (
+          charge_control_end_threshold: 80,
+          panel_od: false,
+          mini_led_mode: false,
+          disable_nvidia_powerd_on_battery: true,
+          ac_command: "",
+          bat_command: "",
+          platform_policy_on_battery: Quiet,
+          platform_policy_on_ac: Performance,
+          ppt_pl1_spl: None,
+          ppt_pl2_sppt: None,
+          ppt_fppt: None,
+          ppt_apu_sppt: None,
+          ppt_platform_sppt: None,
+          nv_dynamic_boost: None,
+          nv_temp_target: None,
+        )
+      '';
+      profileConfig = ''
+        (
+          active_profile: Quiet,
+        )
+      '';
     };
 
     gvfs.enable = true;
