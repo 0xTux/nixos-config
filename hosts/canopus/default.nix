@@ -187,7 +187,7 @@
           ac_command: "",
           bat_command: "",
           platform_policy_on_battery: Quiet,
-          platform_policy_on_ac: Performance,
+          platform_policy_on_ac: Quiet,
           ppt_pl1_spl: None,
           ppt_pl2_sppt: None,
           ppt_fppt: None,
