@@ -26,6 +26,10 @@
       };
     };
     go.enable = true;
+    yazi = {
+      enable = true;
+      enableZshIntegration = true;
+    };
   };
 
   home.packages = with pkgs; [
