@@ -11,6 +11,7 @@
     ./barrier
     ./firefox
     ./kdeconnect
+    ./vs-code
     # ./bitwarden
   ];
 
@@ -56,7 +57,6 @@
     };
   };
 
-  programs.vscode.enable = true;
   programs.home-manager.enable = true;
 
   systemd.user.startServices = "sd-switch";
