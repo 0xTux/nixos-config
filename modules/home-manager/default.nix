@@ -12,7 +12,7 @@
     ./firefox
     ./kdeconnect
     ./vs-code
-    # ./bitwarden
+    ./bitwarden
   ];
 
   nixpkgs = {
