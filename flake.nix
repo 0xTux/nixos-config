@@ -44,6 +44,7 @@
             ./hosts/canopus
 
             ./modules/nixos/desktop/awesome
+            ./modules/nixos/desktop/hyprland
             ./modules/nixos/virtualisation
             ./modules/nixos/steam.nix
 
@@ -54,6 +55,8 @@
               home-manager.users.${username} = {
                 imports = [
                   ./modules/home-manager
+                  ./modules/home-manager/hyprland
+                  ./modules/home-manager/waybar
                   ./home/tux
                 ];
               };
