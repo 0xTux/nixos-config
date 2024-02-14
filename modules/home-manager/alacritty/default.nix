@@ -8,7 +8,7 @@
         bold.family = "JetBrainsMono Nerd Font";
         italic.family = "JetBrainsMono Nerd Font";
         bold_italic.family = "JetBrainsMono Nerd Font";
-        size = 10;
+        size = 16;
       };
 
       window = {
@@ -20,8 +20,6 @@
         decorations = "none";
         opacity = 1.0;
         dynamic_title = true;
-        history = 10000;
-        multiplier = 3;
       };
 
       selection.save_to_clipboard = false;
@@ -30,46 +28,32 @@
 
       colors = {
         primary = {
-          background = "#0f0f0f";
-          foreground = "0xa6accd";
+          background = "#0d0f18";
+          foreground = "#a5b6cf";
         };
         normal = {
-          black = "0x1b1e28";
-          red = "0xd0679d";
-          green = "0x5de4c7";
-          yellow = "0xfffac2";
-          blue = "0x89ddff";
-          magenta = "0xfcc5e9";
-          cyan = "0xadd7ff";
-          white = "0xffffff";
+          black = "#1c1e27";
+          blue = "#8baff1";
+          cyan = "#98d3ee";
+          green = "#95d3af";
+          magenta = "#c79bf0";
+          red = "#e26c7c";
+          white = "#d0d3d8";
+          yellow = "#f1d8a5";
         };
         bright = {
-          black = "0xa6accd";
-          red = "0xd0679d";
-          green = "0x5de4c7";
-          yellow = "0xfffac2";
-          blue = "0xadd7ff";
-          magenta = "0xfae4fc";
-          cyan = "0x89ddff";
-          white = "0xffffff";
+          black = "#151720";
+          blue = "#86aaec";
+          cyan = "#93cee9";
+          green = "#90ceaa";
+          magenta = "#c296eb";
+          red = "#dd6777";
+          white = "#cbced3";
+          yellow = "#ecd3a0";
         };
         cursor = {
-          cursor = "#bb9af7";
-          text = "CellBackground";
-        };
-        search = {
-          matches = {
-            foreground = "0x1b1e28";
-            background = "0xadd7ff";
-          };
-          focused_match = {
-            foreground = "0x1b1e28";
-            background = "0xadd7ff";
-          };
-          footer_bar = {
-            foreground = "0x1b1e28";
-            background = "0xadd7ff";
-          };
+          cursor = "#a5b6cf";
+          text = "CellForeground";
         };
         selection = {
           text = "CellForeground";
