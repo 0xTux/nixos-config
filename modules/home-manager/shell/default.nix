@@ -9,13 +9,15 @@
       syntaxHighlighting.enable = true;
       enableAutosuggestions = true;
       initExtra = ''
-        eval "$(starship init zsh)"
         nitch
         export WINIT_X11_SCALE_FACTOR=1
       '';
     };
     lazygit.enable = true;
-    zoxide.enable = true;
+    zoxide = {
+      enable = true;
+      options = [ "--cmd cd" ];
+    };
     ripgrep.enable = true;
     btop = {
       enable = true;
