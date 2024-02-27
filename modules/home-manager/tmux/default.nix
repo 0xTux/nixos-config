@@ -7,10 +7,6 @@
         plugin = tmuxPlugins.gruvbox;
         extraConfig = "set -g @tmux-gruvbox 'dark'";
       }
-      {
-        plugin = tmuxPlugins.power-theme;
-        extraConfig = "set -g @tmux_power_theme 'gold'";
-      }
     ];
     extraConfig = "
 
