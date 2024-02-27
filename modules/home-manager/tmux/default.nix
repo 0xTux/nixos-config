@@ -14,6 +14,7 @@
     ];
     extraConfig = "
 
+       set-option -sa terminal-overrides \",xterm*:Tc\"
        set -g mouse on  
        set-option -g status-position top
        set-option -g allow-rename off
