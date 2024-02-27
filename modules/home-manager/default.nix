@@ -13,6 +13,7 @@
     ./kdeconnect
     ./vs-code
     ./bitwarden
+    ./tmux
   ];
 
   nixpkgs = {
