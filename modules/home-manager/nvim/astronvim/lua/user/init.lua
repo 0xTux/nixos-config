@@ -5,7 +5,7 @@ M.opt = {
 	neovide_scale_factor = 0.6,
 }
 
-M.colorscheme = "gruvbox-material" --"carbonfox"
+M.colorscheme = "gruvbox-baby"
 M.icons = {
 	VimIcon = "",
 	ScrollText = "",
@@ -78,10 +78,13 @@ M.plugins = {
 	{ import = "astrocommunity.colorscheme.nightfox-nvim" },
 	{ import = "astrocommunity.colorscheme.gruvbox-baby" },
 	{
-		"gruvbox-material",
+		"gruvbox-baby",
 		config = function()
-			vim.g.gruvbox_material_background = "hard"
-			vim.g.gruvbox_material_transparent_background = 1
+			vim.g.gruvbox_baby_background_color = "dark"
+			vim.g.gruvbox_baby_transparent_mode = true
+			-- vim.g.gruvbox_baby_color_overrides = {
+			-- 	background = "#0f0f0f",
+			-- }
 		end,
 	},
 	{
