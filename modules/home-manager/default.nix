@@ -14,6 +14,7 @@
     ./vs-code
     ./bitwarden
     ./tmux
+    ./helix
   ];
 
   nixpkgs = {
