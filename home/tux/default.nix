@@ -2,6 +2,7 @@
   home.packages = with pkgs; [
     discord
     anydesk
+    rustdesk-flutter
     nodePackages.pnpm
     vlc
     darktable
