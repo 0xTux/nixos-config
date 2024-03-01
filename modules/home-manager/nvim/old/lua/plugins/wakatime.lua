@@ -1,1 +1,0 @@
-return { 'wakatime/vim-wakatime' }

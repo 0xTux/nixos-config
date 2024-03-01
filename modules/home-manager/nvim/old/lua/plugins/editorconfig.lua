@@ -1,3 +1,0 @@
-return {
-   'editorconfig/editorconfig-vim',
-}
