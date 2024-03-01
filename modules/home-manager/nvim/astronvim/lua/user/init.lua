@@ -5,7 +5,7 @@ M.opt = {
 	neovide_scale_factor = 0.6,
 }
 
-M.colorscheme = "gruvbox-baby"
+M.colorscheme = "oxocarbon"
 M.icons = {
 	VimIcon = "",
 	ScrollText = "",
@@ -77,6 +77,7 @@ M.plugins = {
 	{ import = "astrocommunity.pack.prisma" },
 	{ import = "astrocommunity.colorscheme.nightfox-nvim" },
 	{ import = "astrocommunity.colorscheme.gruvbox-baby" },
+	{ import = "astrocommunity.colorscheme.oxocarbon-nvim" },
 	{
 		"gruvbox-baby",
 		config = function()
