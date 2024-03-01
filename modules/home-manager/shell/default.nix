@@ -46,7 +46,6 @@
     nvtop
     zip
     unzip
-    speedtestpp
     pciutils
     gnumake
     copyq
