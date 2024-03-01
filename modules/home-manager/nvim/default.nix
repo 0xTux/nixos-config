@@ -1,6 +1,6 @@
 { inputs, pkgs, ... }: {
 
-  xdg.configFile = {
+  xdg.configFile."nvim" = {
     source = "${pkgs.nvchad}";
   };
 
@@ -21,10 +21,14 @@
     packages = with pkgs; [
       gcc
       neovide
+
       # nix
       statix # Lints and suggestions for the nix programming language
       deadnix # Find and remove unused code in .nix source files
       alejandra # Nix Code Formatter
+
+      # lua
+      luarocks
 
       gdu
       ripgrep

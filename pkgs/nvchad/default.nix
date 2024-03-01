@@ -1,4 +1,4 @@
-{ lib, stdenv, pkgs }:
+{ stdenv, lib, fetchFromGitHub }:
 
 let
   custom = ./custom;
@@ -7,11 +7,11 @@ stdenv.mkDerivation {
   pname = "nvchad";
   version = "2.0.0";
 
-  src = pkgs.fetchFromGitHub {
+  src = fetchFromGitHub {
     owner = "NvChad";
     repo = "NvChad";
     rev = "refs/heads/v2.0";
-    sha256 = "sha256-x1y2SkoLNwu0NzmnKxUfl5UQG+SIcW87FhpyZMEHuU8=";
+    sha256 = "sha256-tKMvKdB3jPSvcyewaOe8oak3pXhjAcLyyxgGMiMeqeU=";
   };
 
   installPhase = ''
