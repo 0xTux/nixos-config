@@ -1,22 +1,5 @@
 {
   "nodes": {
-    "astronvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1708524813,
-        "narHash": "sha256-fUfh00iYhLJ89wdvtOLM5vAQkZGXanNboqkUWW6Y3Y4=",
-        "owner": "AstroNvim",
-        "repo": "AstroNvim",
-        "rev": "e7483c864e67fed4d1737c3ba76fe9c50b50ad12",
-        "type": "github"
-      },
-      "original": {
-        "owner": "AstroNvim",
-        "ref": "v3.44.0",
-        "repo": "AstroNvim",
-        "type": "github"
-      }
-    },
     "emacs": {
       "inputs": {
         "flake-utils": "flake-utils_2",
@@ -345,7 +328,6 @@
     },
     "root": {
       "inputs": {
-        "astronvim": "astronvim",
         "home-manager": "home-manager",
         "nixos-hardware": "nixos-hardware",
         "nixos-wsl": "nixos-wsl",
