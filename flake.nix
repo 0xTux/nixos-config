@@ -11,10 +11,6 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    astronvim = {
-      url = "github:AstroNvim/AstroNvim/v3.44.0";
-      flake = false;
-    };
     nixos-hardware.url = "github:nixos/nixos-hardware";
     nixpkgs-f2k.url = "github:moni-dz/nixpkgs-f2k";
     nur.url = "github:nix-community/nur";
