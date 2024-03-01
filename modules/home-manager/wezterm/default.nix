@@ -7,13 +7,13 @@
       local config = {}
 
       config.window_close_confirmation = 'NeverPrompt'
-      config.color_scheme = 'Gruvbox Material (Gogh)'
-      config.colors = {
-        background = "#0f0f0f"
-      }
+      config.color_scheme = 'Oxocarbon Dark (Gogh)'
+      -- config.colors = {
+      --  background = "#0f0f0f"
+      -- }
       config.enable_tab_bar = false
       config.font = wezterm.font_with_fallback {
-        'FiraCode Nerd Font',
+        'JetBrainsMono Nerd Font',
       }
       config.font_size = 16.0
       config.window_background_opacity = 1
