@@ -1,9 +1,10 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   home.packages = with pkgs; [
     discord
     anydesk
     rustdesk-flutter
     nodePackages.pnpm
+    nodePackages.yarn
     vlc
     darktable
     rawtherapee
