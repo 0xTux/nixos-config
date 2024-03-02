@@ -1,8 +1,4 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   services.picom = {
     enable = true;
     package = pkgs.picom-next;

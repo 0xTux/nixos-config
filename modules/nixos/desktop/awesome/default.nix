@@ -1,9 +1,6 @@
 {
-  inputs,
-  outputs,
   lib,
   pkgs,
-  username,
   ...
 }: {
   services = {
