@@ -23,12 +23,14 @@ M.mason = {
     -- defaults
     "lua-language-server",
     "stylua",
+    "luacheck",
 
     -- web dev
     "css-lsp",
     "html-lsp",
     "prettierd",
     "eslint-lsp",
+    "eslint_d",
     "typescript-language-server",
     "tailwindcss-language-server",
 
