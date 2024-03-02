@@ -70,6 +70,10 @@ local plugins = {
       require("nvim-ts-autotag").setup()
     end,
   },
+  {
+    "wakatime/vim-wakatime",
+    lazy = false,
+  },
 }
 
 return plugins
