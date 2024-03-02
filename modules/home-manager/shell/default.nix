@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   programs = {
     bat.enable = true;
     zsh = {
@@ -16,7 +16,7 @@
     lazygit.enable = true;
     zoxide = {
       enable = true;
-      options = [ "--cmd cd" ];
+      options = ["--cmd cd"];
     };
     ripgrep.enable = true;
     btop = {

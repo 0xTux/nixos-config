@@ -1,5 +1,8 @@
-{ inputs, pkgs, ... }: {
-
+{
+  inputs,
+  pkgs,
+  ...
+}: {
   # fix nvchad
   # xdg.configFile."nvim" = {
   #   source = "${pkgs.nvchad}";

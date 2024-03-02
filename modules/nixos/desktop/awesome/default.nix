@@ -1,4 +1,11 @@
-{ inputs, outputs, lib, pkgs, username, ... }: {
+{
+  inputs,
+  outputs,
+  lib,
+  pkgs,
+  username,
+  ...
+}: {
   services = {
     xserver = {
       enable = true;
@@ -34,7 +41,7 @@
 
   programs.dconf.enable = true;
 
-  environment.systemPackages = with pkgs;[
+  environment.systemPackages = with pkgs; [
     lua53Packages.lua
     wezterm
     acpi

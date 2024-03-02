@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
-  nvchad = pkgs.callPackage ./nvchad { };
-  astronvim = pkgs.callPackage ./astronvim { };
+{pkgs, ...}: {
+  nvchad = pkgs.callPackage ./nvchad {};
+  astronvim = pkgs.callPackage ./astronvim {};
 }

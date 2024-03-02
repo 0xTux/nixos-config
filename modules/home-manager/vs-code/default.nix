@@ -1,5 +1,4 @@
-{ pkgs, ... }: {
-
+{pkgs, ...}: {
   programs.vscode = {
     enable = true;
     package = pkgs.vscodium;
@@ -39,7 +38,7 @@
       "terminal.integrated.fontFamily" = "FiraCode NF, FiraCode Nerd Font , FiraCode";
     };
 
-    extensions = with pkgs.vscode-extensions;[
+    extensions = with pkgs.vscode-extensions; [
       wakatime.vscode-wakatime
       ms-dotnettools.csharp
       naumovs.color-highlight

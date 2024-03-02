@@ -1,4 +1,8 @@
-{ config, pkgs, ... }: {
+{
+  config,
+  pkgs,
+  ...
+}: {
   services.picom = {
     enable = true;
     package = pkgs.picom-next;
@@ -8,7 +12,7 @@
 
     fade = true;
     fadeDelta = 10;
-    fadeSteps = [ 0.05 0.05 ];
+    fadeSteps = [0.05 0.05];
     fadeExclude = [
       "window_type *= 'menu'"
     ];
@@ -36,7 +40,7 @@
 
       corner-radius = 0;
 
-      # pijulius specifics 
+      # pijulius specifics
       animations = true;
       animation-stiffness = 500;
       animation-window-mass = 1.0;

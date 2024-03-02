@@ -1,4 +1,12 @@
-{ inputs, outputs, lib, config, pkgs, username, ... }: {
+{
+  inputs,
+  outputs,
+  lib,
+  config,
+  pkgs,
+  username,
+  ...
+}: {
   imports = [
     inputs.nixos-hardware.nixosModules.asus-zephyrus-ga503
     ./hardware-configuration.nix
@@ -46,19 +54,25 @@
     networkmanager.enable = true;
     firewall = {
       enable = true;
-      allowedTCPPorts = [ 80 443 3000 6666 ];
+      allowedTCPPorts = [80 443 3000 6666 8081];
       allowedTCPPortRanges = [
-        { from = 1714; to = 1764; }
+        {
+          from = 1714;
+          to = 1764;
+        }
       ];
       allowedUDPPortRanges = [
-        { from = 1714; to = 1764; }
+        {
+          from = 1714;
+          to = 1764;
+        }
       ];
     };
   };
 
   boot = {
     kernelPackages = pkgs.linuxPackages_zen;
-    supportedFilesystems = [ "ntfs" ];
+    supportedFilesystems = ["ntfs"];
     initrd.systemd.enable = true;
 
     loader = {
@@ -89,9 +103,9 @@
     user = {
       services.polkit-gnome-authentication-agent-1 = {
         description = "polkit-gnome-authentication-agent-1";
-        wantedBy = [ "graphical-session.target" ];
-        wants = [ "graphical-session.target" ];
-        after = [ "graphical-session.target" ];
+        wantedBy = ["graphical-session.target"];
+        wants = ["graphical-session.target"];
+        after = ["graphical-session.target"];
         serviceConfig = {
           Type = "simple";
           ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
@@ -108,7 +122,7 @@
     zsh.enable = true;
     thunar = {
       enable = true;
-      plugins = with pkgs.xfce; [ thunar-archive-plugin thunar-volman ];
+      plugins = with pkgs.xfce; [thunar-archive-plugin thunar-volman];
     };
     nix-ld.enable = true;
     nm-applet.enable = true;
@@ -119,7 +133,7 @@
     users.${username} = {
       initialPassword = "${username}";
       isNormalUser = true;
-      extraGroups = [ "networkmanager" "wheel" "storage" ];
+      extraGroups = ["networkmanager" "wheel" "storage"];
       openssh.authorizedKeys.keys = [
         ''ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL+OzPUe2ECPC929DqpkM39tl/vdNAXfsRnmrGfR+X3D 0xtux@pm.me''
       ];
@@ -215,7 +229,7 @@
     ollama.enable = true;
   };
 
-  fonts.packages = with pkgs; [ (nerdfonts.override { fonts = [ "FiraCode" "JetBrainsMono" ]; }) ];
+  fonts.packages = with pkgs; [(nerdfonts.override {fonts = ["FiraCode" "JetBrainsMono"];})];
 
   system.stateVersion = "23.11";
 }

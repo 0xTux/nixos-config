@@ -1,8 +1,7 @@
-{ pkgs, ... }: {
-
+{pkgs, ...}: {
   programs.tmux = {
     enable = true;
-    plugins = with pkgs;[
+    plugins = with pkgs; [
       {
         plugin = tmuxPlugins.gruvbox;
         extraConfig = "set -g @tmux-gruvbox 'dark'";
@@ -42,5 +41,4 @@
 
       ";
   };
-
 }

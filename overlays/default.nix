@@ -1,5 +1,5 @@
-{ inputs, ... }: {
-  additions = final: _prev: import ../pkgs { pkgs = final; };
+{inputs, ...}: {
+  additions = final: _prev: import ../pkgs {pkgs = final;};
 
   modifications = final: prev: {
     #vscode = prev.vscode.overrideAttrs (oldAttrs: rec {
@@ -11,7 +11,7 @@
     #  buildInputs = oldAttrs.buildInputs;
     #});
 
-    awesome = inputs.nixpkgs-f2k.packages.${prev.system}.awesome-git.override { lua = prev.lua53Packages.lua; };
+    awesome = inputs.nixpkgs-f2k.packages.${prev.system}.awesome-git.override {lua = prev.lua53Packages.lua;};
   };
 
   # When applied, the unstable nixpkgs set (declared in the flake inputs) will

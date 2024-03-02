@@ -1,5 +1,9 @@
-{ config, lib, pkgs, ... }: {
-
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   security = {
     acme = {
       defaults.email = "0xtux@pm.me";
@@ -56,6 +60,6 @@
     };
   };
 
-  networking.firewall.allowedTCPPorts = [ 80 443 ];
-  environment.systemPackages = with pkgs;[ headscale ];
+  networking.firewall.allowedTCPPorts = [80 443];
+  environment.systemPackages = with pkgs; [headscale];
 }
