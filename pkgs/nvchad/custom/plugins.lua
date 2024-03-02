@@ -30,6 +30,13 @@ local plugins = {
   -- 	end,
   -- },
   {
+    "David-Kunz/gen.nvim",
+    lazy = false,
+    opts = function()
+      return require("custom.configs.gen")
+    end,
+  },
+  {
     "Shatur/neovim-session-manager",
     dependencies = {
       "nvim-lua/plenary.nvim",
