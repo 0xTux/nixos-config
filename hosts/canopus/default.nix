@@ -17,6 +17,7 @@
       outputs.overlays.modifications
       outputs.overlays.unstable-packages
       outputs.overlays.nur
+      outputs.overlays.nix-vscode-extensions
     ];
 
     config = {

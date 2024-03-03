@@ -27,37 +27,44 @@
     ];
 
     userSettings = {
-      "window.zoomLevel" = 1;
-      "workbench.colorTheme" = "Gruvbox Dark Hard";
+      "window.zoomLevel" = 2;
+      "window.menuBarVisibility" = "toggle";
 
-      "editor" = {
-        "fontFamily" = "FiraCode NF, FiraCode Nerd Font";
-        "fontLigatures" = true;
-      };
+      "workbench.colorTheme" = "Poimandres Alternate";
+      "workbench.startupEditor" = "none";
+
+      "editor.fontFamily" = "FiraCode NF, FiraCode Nerd Font";
+      "editor.fontLigatures" = true;
+      "editor.cursorBlinking" = "smooth";
+      "editor.minimap.enabled" = false;
 
       "terminal.integrated.fontFamily" = "FiraCode NF, FiraCode Nerd Font , FiraCode";
     };
 
-    extensions = with pkgs.vscode-extensions; [
-      wakatime.vscode-wakatime
-      ms-dotnettools.csharp
-      naumovs.color-highlight
-      ms-vscode-remote.remote-containers
-      ms-azuretools.vscode-docker
-      mikestead.dotenv
-      golang.go
-      jdinhlife.gruvbox
-      wix.vscode-import-cost
-      sumneko.lua
-      yzhang.markdown-all-in-one
-      jnoortheen.nix-ide
-      esbenp.prettier-vscode
-      prisma.prisma
-      ms-python.python
-      ms-vscode-remote.remote-ssh
-      humao.rest-client
-      bradlc.vscode-tailwindcss
-      gruntfuggly.todo-tree
-    ];
+    extensions =
+      (with pkgs.vscode-extensions; [
+        wakatime.vscode-wakatime
+        ms-dotnettools.csharp
+        naumovs.color-highlight
+        ms-vscode-remote.remote-containers
+        ms-azuretools.vscode-docker
+        mikestead.dotenv
+        golang.go
+        wix.vscode-import-cost
+        sumneko.lua
+        yzhang.markdown-all-in-one
+        jnoortheen.nix-ide
+        esbenp.prettier-vscode
+        prisma.prisma
+        ms-python.python
+        ms-vscode-remote.remote-ssh
+        humao.rest-client
+        bradlc.vscode-tailwindcss
+        gruntfuggly.todo-tree
+      ])
+      ++ (with pkgs.vscode-marketplace; [
+        danielpriestley.poimandres-alternate
+        pufferbommy.pretty-poimandres
+      ]);
   };
 }
