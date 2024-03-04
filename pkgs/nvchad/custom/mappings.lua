@@ -27,4 +27,23 @@ M.nvterm = {
   },
 }
 
+if vim.g.neovide then
+  M.neovide = {
+    n = {
+      ["<C-=>"] = {
+        function()
+          vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.1
+        end,
+        desc = "Zoom In (Neovide)",
+      },
+      ["<C-->"] = {
+        function()
+          vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - 0.1
+        end,
+        desc = "Zoom Out (Neovide)",
+      },
+    },
+  }
+end
+
 return M

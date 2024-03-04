@@ -56,4 +56,11 @@ M.nvterm = {
   },
 }
 
+M.telescope = {
+  defaults = {
+    winblend = 40,
+    pumblend = 40,
+  },
+}
+
 return M

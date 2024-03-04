@@ -13,6 +13,10 @@ local plugins = {
     "NvChad/nvterm",
     opts = overrides.nvterm,
   },
+  -- {
+  --   "telescope.nvim",
+  --   opts = overrides.telescope,
+  -- },
   -- Need to setup properly
   -- {
   -- 	"stevearc/conform.nvim",
