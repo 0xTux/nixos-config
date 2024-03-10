@@ -39,23 +39,6 @@ M.mason = {
   },
 }
 
-M.nvterm = {
-  terminals = {
-    shell = vim.o.shell,
-    list = {},
-    type_opts = {
-      float = {
-        relative = "editor",
-        row = 0.23,
-        col = 0.15,
-        width = 0.7,
-        height = 0.5,
-        border = "single",
-      },
-    },
-  },
-}
-
 M.telescope = {
   defaults = {
     winblend = 40,

@@ -1,8 +1,7 @@
 {pkgs, ...}: {
-  # fix nvchad
-  # xdg.configFile."nvim" = {
-  #   source = "${pkgs.nvchad}";
-  # };
+  xdg.configFile."nvim" = {
+    source = "${pkgs.nvchad}";
+  };
 
   programs = {
     neovim = {

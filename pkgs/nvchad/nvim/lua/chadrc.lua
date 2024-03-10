@@ -1,7 +1,7 @@
 local M = {}
 
 M.ui = {
-  theme = "oxocarbon",
+  theme = "poimandres",
   transparency = true,
   nvdash = {
     load_on_startup = true,
@@ -15,8 +15,5 @@ M.ui = {
     },
   },
 }
-
-M.mappings = require("custom.mappings")
-M.plugins = "custom.plugins"
 
 return M

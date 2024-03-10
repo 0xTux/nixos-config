@@ -1,6 +1,12 @@
-local overrides = require("custom.configs.overrides")
+local overrides = require("configs.overrides")
 
 local plugins = {
+  {
+    "stevearc/conform.nvim",
+    config = function()
+      require "configs.conform"
+    end,
+  },
   {
     "nvim-treesitter/nvim-treesitter",
     opts = overrides.treesitter,
@@ -10,34 +16,10 @@ local plugins = {
     opts = overrides.mason,
   },
   {
-    "NvChad/nvterm",
-    opts = overrides.nvterm,
-  },
-  -- {
-  --   "telescope.nvim",
-  --   opts = overrides.telescope,
-  -- },
-  -- Need to setup properly
-  -- {
-  -- 	"stevearc/conform.nvim",
-  -- 	event = "BufWritePre",
-  -- 	config = function()
-  -- 		require("custom.configs.conform")
-  -- 	end,
-  -- },
-  -- {
-  -- 	"mfussenegger/nvim-lint",
-  -- 	lazy = true,
-  -- 	event = { "BufReadPre", "BufNewFile" },
-  -- 	config = function()
-  -- 		require("custom.configs.nvim-lint")
-  -- 	end,
-  -- },
-  {
     "David-Kunz/gen.nvim",
     lazy = false,
     opts = function()
-      return require("custom.configs.gen")
+      return require("configs.gen")
     end,
   },
   {
@@ -57,21 +39,21 @@ local plugins = {
       "rcarriga/nvim-notify",
     },
     opts = function()
-      return require("custom.configs.noice")
+      return require("configs.noice")
     end,
   },
   {
     "neovim/nvim-lspconfig",
     config = function()
-      require("plugins.configs.lspconfig")
-      require("custom.configs.lspconfig")
+      require("nvchad.configs.lspconfig").defaults()
+      require("configs.lspconfig")
     end,
   },
   {
     "nvimtools/none-ls.nvim",
     event = "VeryLazy",
     opts = function()
-      return require("custom.configs.null-ls")
+      return require("configs.null-ls")
     end,
   },
   {

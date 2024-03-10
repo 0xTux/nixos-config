@@ -1,26 +1,16 @@
 {
   stdenv,
   lib,
-  fetchFromGitHub,
 }: let
-  custom = ./custom;
+  nvim = ./nvim;
 in
   stdenv.mkDerivation {
     pname = "nvchad";
-    version = "2.0.0";
+    version = "2.5.0";
 
-    src = fetchFromGitHub {
-      owner = "NvChad";
-      repo = "NvChad";
-      rev = "refs/heads/v2.0";
-      sha256 = "sha256-tKMvKdB3jPSvcyewaOe8oak3pXhjAcLyyxgGMiMeqeU=";
-    };
-
-    installPhase = ''
-      mkdir $out
-      cp -r * "$out/"
-      mkdir -p "$out/lua/custom"
-      cp -r ${custom}/* "$out/lua/custom/"
+    buildCommand = ''
+      mkdir -p $out
+      cp -r ${nvim}/* "$out/"
     '';
 
     meta = with lib; {
