@@ -32,7 +32,7 @@
       frame-opacity = 1;
       blur-background = true;
       blur-method = "dual_kawase";
-      blur-strength = 6;
+      blur-strength = 10;
 
       corner-radius = 0;
 
