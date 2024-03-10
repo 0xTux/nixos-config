@@ -22,9 +22,10 @@
       neovide
 
       # nix
-      statix # Lints and suggestions for the nix programming language
-      deadnix # Find and remove unused code in .nix source files
-      alejandra # Nix Code Formatter
+      nil # Language Server
+      statix # Lints and suggestions
+      deadnix # Find and remove unused
+      alejandra # Code Formatter
 
       # lua
       luarocks
