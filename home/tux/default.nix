@@ -12,6 +12,5 @@
     arandr
     gimp
     obs-studio
-    kooha
   ];
 }
