@@ -4,7 +4,7 @@ local plugins = {
   {
     "stevearc/conform.nvim",
     config = function()
-      require "configs.conform"
+      require("configs.conform")
     end,
   },
   {
@@ -66,6 +66,26 @@ local plugins = {
   {
     "wakatime/vim-wakatime",
     lazy = false,
+  },
+  {
+    "nvim-treesitter/nvim-treesitter-context",
+    event = "BufReadPost",
+  },
+  {
+    "Wansmer/treesj",
+    cmd = { "TSJToggle" },
+  },
+  {
+    "simrat39/symbols-outline.nvim",
+    cmd = "SymbolsOutline",
+    config = true,
+  },
+  {
+    "folke/trouble.nvim",
+    cmd = { "Trouble", "TroubleToggle", "TodoTrouble" },
+    dependencies = {
+      "folke/todo-comments.nvim",
+    },
   },
 }
 
