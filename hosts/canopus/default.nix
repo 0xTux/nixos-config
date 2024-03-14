@@ -176,6 +176,26 @@
       libinput.touchpad.naturalScrolling = true;
     };
 
+    # To use Auto-cpufreq we need to
+    # disable TLP because it's enabled by nixos-hardware
+    tlp.enable = false;
+    auto-cpufreq = {
+      enable = true;
+      settings = {
+        battery = {
+          governor = "powersave";
+          turbo = "never";
+          scaling_min_freq = 400000;
+          scaling_max_freq = 2800000;
+        };
+        charger = {
+          governor = "powersave";
+          turbo = "never";
+          scaling_max_freq = 3300000;
+        };
+      };
+    };
+
     blueman.enable = true;
 
     supergfxd = {
