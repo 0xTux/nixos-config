@@ -18,7 +18,7 @@
         enable = true;
         luaModules = lib.attrValues {
           inherit
-            (pkgs.lua53Packages)
+            (pkgs.luajitPackages)
             lgi
             ldbus
             luadbi-mysql
@@ -39,7 +39,7 @@
   programs.dconf.enable = true;
 
   environment.systemPackages = with pkgs; [
-    lua53Packages.lua
+    luajit
     wezterm
     acpi
     linuxKernel.packages.linux_zen.acpi_call
