@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
     discord
+    telegram-desktop
     anydesk
     rustdesk-flutter
     nodePackages.pnpm
