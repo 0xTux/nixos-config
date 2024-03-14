@@ -32,7 +32,7 @@ map("n", "<leader>Sd", "<cmd>SessionManager! delete_session<cr>", { desc = "Dele
 map("n", "<leader>Sf", "<cmd>SessionManager! load_session<cr>", { desc = "Search sessions" })
 map("n", "<leader>S.", "<cmd>SessionManager! load_current_dir_session<cr>", { desc = "Load current directory session" })
 map("n", "<leader>tt", "<cmd>TroubleToggle<cr>", { desc = "Toggle diagnostics" })
-map("n", "<leader>td", "<cmd>TodoTrouble keywords=TODO,FIX,FIXME,BUG,TEST,NOTE<cr>", { desc = "Todo/Fix/Fixme" })
+map("n", "<leader>td", "<cmd>TodoTelescope keywords=TODO,FIX,FIXME,BUG,TEST,NOTE<cr>", { desc = "Todo/Fix/Fixme" })
 map("n", "<leader>m", toggleTreesj, { desc = "Toggle Treesitter Join" })
 
 if g.neovide then

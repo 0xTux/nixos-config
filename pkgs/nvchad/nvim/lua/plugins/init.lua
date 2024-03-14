@@ -82,11 +82,12 @@ local plugins = {
   },
   {
     "folke/trouble.nvim",
-    cmd = { "Trouble", "TroubleToggle", "TodoTrouble" },
-    dependencies = {
-      "folke/todo-comments.nvim",
-    },
+    cmd = { "Trouble", "TroubleToggle" },
+  },
+  {
+    "folke/todo-comments.nvim",
+    cmd = { "TodoTrouble", "TodoTelescope" },
+    config = true,
   },
 }
-
 return plugins
