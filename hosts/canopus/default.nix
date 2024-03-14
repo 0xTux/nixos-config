@@ -169,8 +169,10 @@
 
     xserver = {
       enable = true;
-      layout = "in";
-      xkbVariant = "eng";
+      xkb = {
+        layout = "in";
+        variant = "eng";
+      };
       libinput.touchpad.naturalScrolling = true;
     };
 
