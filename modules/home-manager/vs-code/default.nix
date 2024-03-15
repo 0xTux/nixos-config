@@ -65,6 +65,10 @@
       ++ (with pkgs.vscode-marketplace; [
         danielpriestley.poimandres-alternate
         pufferbommy.pretty-poimandres
+        yoavbls.pretty-ts-errors
+        formulahendry.auto-rename-tag
+        chakrounanas.turbo-console-log
+        streetsidesoftware.code-spell-checker
       ]);
   };
 }
