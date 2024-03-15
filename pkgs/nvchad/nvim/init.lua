@@ -37,3 +37,13 @@ require("nvchad.autocmds")
 vim.schedule(function()
   require("mappings")
 end)
+
+-- hightlight on yank
+vim.api.nvim_create_autocmd("TextYankPost", {
+  group = vim.api.nvim_create_augroup("highlight_yank", { clear = true }),
+  desc = "Hightlight selection on yank",
+  pattern = "*",
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+})
