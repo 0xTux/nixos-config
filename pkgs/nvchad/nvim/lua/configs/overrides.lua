@@ -15,6 +15,12 @@ M.treesitter = {
 
     -- nix
     "nix",
+
+    -- go
+    "go",
+    "gomod",
+    "gowork",
+    "gosum",
   },
 }
 
@@ -36,6 +42,14 @@ M.mason = {
 
     -- nix
     "nil",
+
+    -- go
+    "gopls",
+    "goimports",
+    "gofumpt",
+    "gomodifytags",
+    "impl",
+    "iferr",
   },
 }
 
