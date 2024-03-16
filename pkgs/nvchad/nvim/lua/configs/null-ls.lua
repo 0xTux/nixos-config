@@ -12,6 +12,13 @@ local opts = {
     b.code_actions.statix,
     b.formatting.alejandra,
     b.diagnostics.deadnix,
+
+    -- go
+    b.code_actions.gomodifytags,
+    b.code_actions.impl,
+    b.formatting.gofumpt,
+    b.formatting.goimports,
+    b.diagnostics.staticcheck,
   },
   on_attach = function(client, bufnr)
     if client.supports_method("textDocument/formatting") then

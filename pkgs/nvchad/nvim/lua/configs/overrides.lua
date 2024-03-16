@@ -50,6 +50,7 @@ M.mason = {
     "gomodifytags",
     "impl",
     "iferr",
+    "staticcheck",
   },
 }
 
