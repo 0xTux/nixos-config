@@ -42,15 +42,6 @@ M.mason = {
 
     -- nix
     "nil",
-
-    -- go
-    "gopls",
-    "goimports",
-    "gofumpt",
-    "gomodifytags",
-    "impl",
-    "iferr",
-    "staticcheck",
   },
 }
 
