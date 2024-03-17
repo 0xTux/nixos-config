@@ -21,6 +21,9 @@ M.treesitter = {
     "gomod",
     "gowork",
     "gosum",
+
+    -- rust
+    "rust",
   },
 }
 
@@ -42,6 +45,11 @@ M.mason = {
 
     -- nix
     "nil",
+
+    -- rust
+    "rust-analyzer",
+    "rustfmt",
+    "codelldb",
   },
 }
 

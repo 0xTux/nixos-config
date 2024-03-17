@@ -4,7 +4,7 @@ local capabilities = configs.capabilities
 
 local lspconfig = require("lspconfig")
 
-local servers = { "tsserver", "tailwindcss", "eslint", "gopls" }
+local servers = { "tsserver", "tailwindcss", "eslint", "gopls", "rust_analyzer" }
 
 local function organize_imports()
   local params = {
