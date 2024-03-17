@@ -165,6 +165,7 @@
       enable = true;
       user = "tux";
       dataDir = "/home/tux/";
+      openDefaultPorts = true;
     };
 
     xserver = {
