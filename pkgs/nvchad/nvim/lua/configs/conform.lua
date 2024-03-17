@@ -15,6 +15,7 @@ local options = {
     html = { prettier },
     markdown = { prettier },
     nix = { "alejandra" },
+    go = { "goimports", "gofumpt" },
   },
 
   format_on_save = {
