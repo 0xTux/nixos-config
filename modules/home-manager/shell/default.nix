@@ -55,8 +55,7 @@
 
     python311
     nodejs
-    rustc
-    cargo
+    rustup
     bun
     stremio
     nixpkgs-fmt
