@@ -89,5 +89,9 @@ local plugins = {
     cmd = { "TodoTrouble", "TodoTelescope" },
     config = true,
   },
+  {
+    "folke/neodev.nvim",
+    event = "VeryLazy",
+  },
 }
 return plugins
