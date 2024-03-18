@@ -95,5 +95,20 @@ local plugins = {
     "folke/neodev.nvim",
     event = "VeryLazy",
   },
+
+  -- Language specific plugins
+  {
+    "pmizio/typescript-tools.nvim",
+    dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+    config = function()
+      require("configs.ts")
+    end,
+    ft = {
+      "javascript",
+      "typescript",
+      "javascriptreact",
+      "typescriptreact",
+    },
+  },
 }
 return plugins
