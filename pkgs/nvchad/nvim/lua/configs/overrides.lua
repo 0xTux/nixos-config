@@ -1,63 +1,65 @@
 local M = {}
 
 M.treesitter = {
-  ensure_installed = {
-    -- defaults
-    "vim",
-    "lua",
+	ensure_installed = {
+		-- defaults
+		"vim",
+		"lua",
 
-    -- web dev
-    "html",
-    "css",
-    "javascript",
-    "typescript",
-    "tsx",
+		-- web dev
+		"html",
+		"css",
+		"javascript",
+		"typescript",
+		"tsx",
 
-    -- nix
-    "nix",
+		-- nix
+		"nix",
 
-    -- go
-    "go",
-    "gomod",
-    "gowork",
-    "gosum",
-
-    -- rust
-    "rust",
-  },
+		-- go
+		"go",
+		"gomod",
+		"gowork",
+		"gosum",
+	},
 }
 
 M.mason = {
-  ensure_installed = {
-    -- defaults
-    "lua-language-server",
-    "stylua",
-    "luacheck",
+	ensure_installed = {
+		-- defaults
+		"lua-language-server",
+		"stylua",
+		"luacheck",
 
-    -- web dev
-    "css-lsp",
-    "html-lsp",
-    "prettierd",
-    "eslint-lsp",
-    "eslint_d",
-    "typescript-language-server",
-    "tailwindcss-language-server",
+		-- web dev
+		"css-lsp",
+		"html-lsp",
+		"prettierd",
+		"eslint-lsp",
+		"eslint_d",
+		"typescript-language-server",
+		"tailwindcss-language-server",
 
-    -- nix
-    "nil",
+		-- nix
+		"nil",
 
-    -- rust
-    "rust-analyzer",
-    "rustfmt",
-    "codelldb",
-  },
+		-- go
+		"gopls",
+		"goimports",
+		"gofumpt",
+		"gomodifytags",
+		"impl",
+		"iferr",
+		"staticcheck",
+		"delve",
+	},
 }
 
 M.telescope = {
-  defaults = {
-    winblend = 40,
-    pumblend = 40,
-  },
+	defaults = {
+		winblend = 40,
+		pumblend = 40,
+	},
 }
 
 return M
