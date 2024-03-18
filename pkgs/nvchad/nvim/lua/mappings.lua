@@ -34,6 +34,7 @@ map("n", "<leader>S.", "<cmd>SessionManager! load_current_dir_session<cr>", { de
 map("n", "<leader>tt", "<cmd>TroubleToggle<cr>", { desc = "Toggle diagnostics" })
 map("n", "<leader>td", "<cmd>TodoTelescope keywords=TODO,FIX,FIXME,BUG,TEST,NOTE<cr>", { desc = "Todo/Fix/Fixme" })
 map("n", "<leader>m", toggleTreesj, { desc = "Toggle Treesitter Join" })
+map("n", "<leader>o", "<cmd>Outline<cr>", { desc = "Toggle Outline" })
 
 if g.neovide then
   local zoomInNeovide = function()

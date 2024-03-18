@@ -78,9 +78,10 @@ local plugins = {
     cmd = { "TSJToggle" },
   },
   {
-    "simrat39/symbols-outline.nvim",
-    cmd = "SymbolsOutline",
-    config = true,
+    "hedyhli/outline.nvim",
+    lazy = true,
+    cmd = { "Outline", "OutlineOpen" },
+    opts = {},
   },
   {
     "folke/trouble.nvim",
@@ -99,7 +100,10 @@ local plugins = {
   -- Language specific plugins
   {
     "pmizio/typescript-tools.nvim",
-    dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "neovim/nvim-lspconfig",
+    },
     config = function()
       require("configs.ts")
     end,
