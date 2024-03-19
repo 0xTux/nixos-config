@@ -5,6 +5,10 @@ M.treesitter = {
     -- defaults
     "vim",
     "lua",
+    "regex",
+    "bash",
+    "markdown",
+    "markdown_inline",
 
     -- web dev
     "html",
