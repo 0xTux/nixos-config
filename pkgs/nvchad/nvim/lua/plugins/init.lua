@@ -95,8 +95,25 @@ local plugins = {
   {
     "folke/neodev.nvim",
     event = "VeryLazy",
+    config = function()
+      require("neodev").setup({
+        library = {
+          plugins = { "nvim-dap-ui" },
+          types = true,
+        },
+      })
+    end,
   },
-
+  {
+    "mfussenegger/nvim-dap",
+    config = function()
+      require("configs.dap")
+    end,
+    dependencies = {
+      "rcarriga/nvim-dap-ui",
+      "nvim-neotest/nvim-nio",
+    },
+  },
   -- Language specific plugins
   {
     "pmizio/typescript-tools.nvim",
@@ -113,6 +130,39 @@ local plugins = {
       "javascriptreact",
       "typescriptreact",
     },
+  },
+  {
+    "ray-x/go.nvim",
+    dependencies = {
+      "neovim/nvim-lspconfig",
+      "nvim-treesitter/nvim-treesitter",
+      "mfussenegger/nvim-dap",
+      "rcarriga/nvim-dap-ui",
+    },
+    event = { "CmdlineEnter" },
+    config = function()
+      require("configs.go")
+    end,
+    ft = {
+      "go",
+      "gomod",
+      "gosum",
+      "gowork",
+      "gotmpl",
+    },
+    build = ':lua require("go.install").update_all_sync()',
+  },
+  {
+    "mrcjkb/rustaceanvim",
+    config = function()
+      require("configs.rust")
+    end,
+    version = "^4",
+    dependencies = {
+      "mfussenegger/nvim-dap",
+      "rcarriga/nvim-dap-ui",
+    },
+    ft = { "rust" },
   },
 }
 return plugins

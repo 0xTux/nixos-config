@@ -21,6 +21,9 @@ M.treesitter = {
     "gomod",
     "gowork",
     "gosum",
+
+    -- rust
+    "rust",
   },
 }
 
@@ -44,13 +47,9 @@ M.mason = {
 
     -- go
     "gopls",
-    "goimports",
-    "gofumpt",
-    "gomodifytags",
-    "impl",
-    "iferr",
-    "staticcheck",
-    "delve",
+
+    -- rust
+    "codelldb",
   },
 }
 

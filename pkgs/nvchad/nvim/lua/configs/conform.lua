@@ -16,6 +16,7 @@ local options = {
     markdown = { prettier },
     nix = { "alejandra" },
     go = { "goimports", "gofumpt" },
+    rust = { "rust_analyzer" },
   },
 
   format_on_save = {

@@ -36,6 +36,12 @@ map("n", "<leader>td", "<cmd>TodoTelescope keywords=TODO,FIX,FIXME,BUG,TEST,NOTE
 map("n", "<leader>m", toggleTreesj, { desc = "Toggle Treesitter Join" })
 map("n", "<leader>o", "<cmd>Outline<cr>", { desc = "Toggle Outline" })
 
+-- DAP
+map("n", "<C-b>", "<cmd>DapToggleBreakpoint<cr>", { desc = "Toggle break point" })
+map("n", "<C-c>", "<cmd>DapContinue<cr>", { desc = "Continue" })
+map("n", "<C-x>", "<cmd>DapTerminate<cr>", { desc = "Terminate" })
+map("n", "<C-o>", "<cmd>DapStepOver<cr>", { desc = "Step over" })
+
 if g.neovide then
   local zoomInNeovide = function()
     g.neovide_scale_factor = g.neovide_scale_factor + 0.1
