@@ -8,7 +8,7 @@
       enable = true;
       defaultEditor = true;
 
-      viAlias = false;
+      viAlias = true;
       vimAlias = true;
 
       withPython3 = true;
