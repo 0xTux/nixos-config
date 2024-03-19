@@ -37,6 +37,7 @@ M.mason = {
     -- web dev
     "css-lsp",
     "html-lsp",
+    "prettier",
     "prettierd",
     "eslint-lsp",
     "eslint_d",
