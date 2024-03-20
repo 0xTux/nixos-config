@@ -7,8 +7,21 @@ local lspconfig = require("lspconfig")
 local servers = { "tailwindcss", "eslint", "gopls" }
 
 for _, lsp in ipairs(servers) do
-  lspconfig[lsp].setup({
-    on_attach = on_attach,
-    capabilities = capabilities,
-  })
+	lspconfig[lsp].setup({
+		on_attach = on_attach,
+		capabilities = capabilities,
+	})
 end
+
+lspconfig.nil_ls.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+	cmd = { "nil" },
+	settings = {
+		["nil"] = {
+			flake = {
+				autoArchive = true,
+			},
+		},
+	},
+})
