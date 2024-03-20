@@ -13,6 +13,13 @@
   wsl.enable = true;
   wsl.defaultUser = "${username}";
 
+  nix = {
+    settings = {
+      experimental-features = "nix-command flakes";
+      auto-optimise-store = true;
+    };
+  };
+
   programs = {
     ssh.startAgent = true;
     zsh.enable = true;
@@ -41,8 +48,6 @@
       ];
     };
   };
-
-  environment.systemPackages = with pkgs; [];
 
   fonts.packages = with pkgs; [(nerdfonts.override {fonts = ["FiraCode" "JetBrainsMono"];})];
 
