@@ -56,6 +56,8 @@
 
     python311
     nodejs
+    nodePackages.pnpm
+    nodePackages.yarn
     rustup
     bun
     stremio
