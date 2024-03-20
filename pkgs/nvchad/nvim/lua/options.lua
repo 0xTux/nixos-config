@@ -1,4 +1,4 @@
-require "nvchad.options"
+require("nvchad.options")
 
 local opt = vim.opt
 local g = vim.g
@@ -10,4 +10,3 @@ opt.guifont = "FiraCode Nerd Font:h12"
 -- neovide stuff
 g.neovide_scale_factor = 0.7
 -- g.neovide_transparency = 0.8
-
