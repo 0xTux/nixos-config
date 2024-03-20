@@ -52,6 +52,7 @@
     zellij
     cht-sh
     nix-output-monitor
+    fzf
 
     python311
     nodejs
