@@ -18,6 +18,14 @@ local plugins = {
     opts = overrides.mason,
   },
   {
+    "nvim-telescope/telescope.nvim",
+    opts = {
+      defaults = {
+        winblend = 0,
+      },
+    },
+  },
+  {
     "David-Kunz/gen.nvim",
     lazy = false,
     opts = function()

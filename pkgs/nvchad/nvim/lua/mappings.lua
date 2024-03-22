@@ -1,7 +1,6 @@
 require("nvchad.mappings")
 
 local map = vim.keymap.set
-local g = vim.g
 
 local float_opts = {
   relative = "editor",
@@ -54,17 +53,4 @@ for i = 1, 9, 1 do
   vim.keymap.set("n", string.format("<A-%s>", i), function()
     vim.api.nvim_set_current_buf(vim.t.bufs[i])
   end)
-end
-
-if g.neovide then
-  local zoomInNeovide = function()
-    g.neovide_scale_factor = g.neovide_scale_factor + 0.1
-  end
-
-  local zoomOutNeovide = function()
-    g.neovide_scale_factor = g.neovide_scale_factor - 0.1
-  end
-
-  map("n", "<C-=>", zoomInNeovide, { desc = "Zoom In (Neovide)" })
-  map("n", "<C-->", zoomOutNeovide, { desc = "Zoom Out (Neovide)" })
 end
