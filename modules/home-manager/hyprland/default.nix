@@ -118,11 +118,9 @@
       #-- Miscellaneous
       misc = {
         disable_hyprland_logo = true;
-        force_hypr_chan = false;
         force_default_wallpaper = 0;
         focus_on_activate = true;
         no_direct_scanout = false;
-        background_color = "0x000000";
       };
 
       #-- Output
