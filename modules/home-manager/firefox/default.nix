@@ -47,6 +47,7 @@
           "browser.tabs.firefox-view" = false;
           "browser.bookmarks.addedImportButton" = false;
           "extensions.pocket.enabled" = false;
+          "browser.fullscreen.autohide" = false;
         };
         extraConfig = ''
           user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);

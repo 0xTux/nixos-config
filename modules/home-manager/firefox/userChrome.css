@@ -111,6 +111,11 @@ tab[selected="true"] .tab-background {
 	padding-top: 1px !important;
 }
 
+/* full screen toolbars */
+#navigator-toolbox[inFullscreen] toolbar:not([collapsed="true"]) {
+  visibility:visible!important;
+}
+
 toolbarbutton.bookmark-item {
 	transition: all 0.3s ease !important;
 	padding: 3px 5px !important;
