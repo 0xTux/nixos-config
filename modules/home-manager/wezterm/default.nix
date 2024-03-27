@@ -17,12 +17,6 @@
       }
       config.font_size = 16.0
       config.window_background_opacity = 1
-      config.window_padding = {
-        left = '20px',
-        right = '20px',
-        top = '20px',
-        bottom = '20px',
-      }
       config.audible_bell = "Disabled"
 
       return config
