@@ -30,6 +30,9 @@
       # lua
       luarocks
 
+      # ts
+      typescript
+
       gdu
       ripgrep
     ];
