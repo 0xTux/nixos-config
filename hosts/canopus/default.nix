@@ -216,7 +216,7 @@
       enableUserService = true;
       asusdConfig = ''
         (
-          charge_control_end_threshold: 80,
+          charge_control_end_threshold: 100,
           panel_od: false,
           mini_led_mode: false,
           disable_nvidia_powerd_on_battery: true,
