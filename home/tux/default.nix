@@ -10,5 +10,6 @@
     beekeeper-studio
     gimp
     obs-studio
+    flameshot
   ];
 }
