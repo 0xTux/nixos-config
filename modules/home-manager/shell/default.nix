@@ -41,6 +41,7 @@
     ranger
     wget
     portal
+    bore-cli
     fast-cli
     gdu
     nvtop
