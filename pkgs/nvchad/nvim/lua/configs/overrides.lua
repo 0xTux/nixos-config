@@ -25,6 +25,7 @@ M.treesitter = {
     "gomod",
     "gowork",
     "gosum",
+    "templ",
 
     -- rust
     "rust",
@@ -41,6 +42,7 @@ M.mason = {
     -- web dev
     "css-lsp",
     "html-lsp",
+    "htmx-lsp",
     "prettier",
     "prettierd",
     "eslint-lsp",
@@ -52,6 +54,7 @@ M.mason = {
 
     -- go
     "gopls",
+    "templ",
 
     -- rust
     "codelldb",

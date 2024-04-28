@@ -4,7 +4,7 @@ local capabilities = configs.capabilities
 
 local lspconfig = require("lspconfig")
 
-local servers = { "tailwindcss", "eslint", "gopls" }
+local servers = { "eslint", "gopls", "templ" }
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup({
@@ -16,6 +16,7 @@ end
 lspconfig.nil_ls.setup({
   on_attach = on_attach,
   capabilities = capabilities,
+  filetypes = { "nix" },
   cmd = { "nil" },
   settings = {
     ["nil"] = {
@@ -24,4 +25,23 @@ lspconfig.nil_ls.setup({
       },
     },
   },
+})
+
+lspconfig.html.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "html", "templ" },
+})
+
+lspconfig.htmx.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "html", "templ" },
+})
+
+lspconfig.tailwindcss.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "templ", "astro", "javascript", "typescript", "react" },
+  init_options = { userLanguages = { templ = "html" } },
 })

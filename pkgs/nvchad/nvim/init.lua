@@ -50,3 +50,5 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 
 -- load neovide
 require("neovide")
+
+vim.filetype.add({ extension = { templ = "templ" } })
