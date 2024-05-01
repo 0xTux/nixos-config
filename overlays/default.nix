@@ -11,7 +11,7 @@
     #  buildInputs = oldAttrs.buildInputs;
     #});
 
-    awesome = inputs.nixpkgs-f2k.packages.${prev.system}.awesome-git.override {lua = prev.lua53Packages.lua;};
+    awesome = inputs.nixpkgs-f2k.packages.${prev.system}.awesome-git.override {lua = prev.luajit;};
   };
 
   # When applied, the unstable nixpkgs set (declared in the flake inputs) will
