@@ -4,16 +4,12 @@
   ...
 }: {
   services = {
+    displayManager = {
+      enable = true;
+    };
+
     xserver = {
       enable = true;
-      displayManager = {
-        sddm.enable = true;
-        # autoLogin = {
-        #   enable = true;
-        #   user = "${username}";
-        # };
-      };
-
       windowManager.awesome = {
         enable = true;
         luaModules = lib.attrValues {
