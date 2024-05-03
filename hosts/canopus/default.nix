@@ -50,7 +50,10 @@
 
   networking = {
     hostName = "canopus";
-    networkmanager.enable = true;
+    networkmanager = {
+      enable = true;
+      wifi.powersave = false;
+    };
     firewall = {
       enable = true;
       allowedTCPPorts = [80 443 3000 6666 8081];
