@@ -130,6 +130,13 @@ local plugins = {
       require("boole").setup()
     end,
   },
+  {
+    "norcalli/nvim-colorizer.lua",
+    event = "BufReadPost",
+    config = function()
+      require("colorizer").setup()
+    end,
+  },
   -- Language specific plugins
   {
     "pmizio/typescript-tools.nvim",
