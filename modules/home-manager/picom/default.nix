@@ -34,7 +34,11 @@
       blur-method = "dual_kawase";
       blur-strength = 10;
 
-      corner-radius = 0;
+      corner-radius = 8;
+
+      rounded-corners-exclude = [
+        "window_type = 'dock'"
+      ];
 
       # pijulius specifics
       animations = true;
