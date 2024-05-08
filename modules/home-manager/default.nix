@@ -1,6 +1,5 @@
 {
   outputs,
-  config,
   pkgs,
   username,
   ...
