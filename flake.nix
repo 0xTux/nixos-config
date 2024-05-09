@@ -80,7 +80,6 @@
             home-manager.users.${username} = {
               imports = [
                 ./modules/home-manager
-                ./home/tux
               ];
             };
           }
@@ -99,7 +98,6 @@
             home-manager.users.${username} = {
               imports = [
                 ./modules/home-manager
-                ./home/tux
               ];
             };
           }
