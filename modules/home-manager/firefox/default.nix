@@ -3,7 +3,7 @@
   username,
   ...
 }: {
-  home.file.".mozilla/firefox/${username}/chrome/firefox-mod-blur".source = pkgs.firefox-mod-blur;
+  home.file.".mozilla/firefox/${username}/chrome".source = pkgs.firefox-mod-blur;
 
   programs.firefox = {
     enable = true;
@@ -56,15 +56,6 @@
           user_pref("full-screen-api.ignore-widgets", true);
           user_pref("media.ffmpeg.vaapi.enabled", true);
           user_pref("media.rdd-vpx.enabled", true);
-        '';
-
-        userChrome = ''
-          @import "firefox-mod-blur/userChrome.css";
-          @import "firefox-mod-blur/EXTRA MODS/Bookmarks Bar Mods/Bookmarks bar same color as toolbar/bookmarks_bar_same_color_as_toolbar.css";
-          @import "firefox-mod-blur/EXTRA MODS/Search Bar Mods/Search box - No search engine buttons/no_search_engines_in_url_bar.css";
-        '';
-        userContent = ''
-          @import "firefox-mod-blur/userContent.css";
         '';
 
         extensions = with pkgs.nur.repos.rycee.firefox-addons; [
