@@ -20,6 +20,7 @@
     ];
 
     config = {
+      cudaSupport = true;
       allowUnfree = true;
       joypixels.acceptLicense = true;
     };
@@ -251,7 +252,10 @@
       enable = true;
       package = pkgs.mullvad-vpn;
     };
-    ollama.enable = true;
+    ollama = {
+      enable = true;
+      acceleration = "cuda";
+    };
   };
 
   fonts.packages = with pkgs; [(nerdfonts.override {fonts = ["FiraCode" "JetBrainsMono"];})];
