@@ -54,6 +54,7 @@
     cht-sh
     nix-output-monitor
     fzf
+    duf
 
     python311
     nodejs
