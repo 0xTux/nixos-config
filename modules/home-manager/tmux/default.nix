@@ -1,23 +1,6 @@
-{pkgs, ...}: {
+{...}: {
   programs.tmux = {
     enable = true;
-    plugins = with pkgs; [
-      {
-        plugin = tmuxPlugins.power-theme.overrideAttrs (_: {
-          src = fetchFromGitHub {
-            owner = "wfxr";
-            repo = "tmux-power";
-            rev = "2e362c50e5772ba1d13a00628baba558b4220f41";
-            sha256 = "sha256-1hjQXC7261DiwrZ54PiwMLJM62srmP8koPNnTEp2zdI=";
-          };
-        });
-        extraConfig = "
-          set -g @tmux_power_theme '#83A3C2'
-          set -g @tmux_power_right_arrow_icon ''
-          set -g @tmux_power_left_arrow_icon ''
-        ";
-      }
-    ];
     extraConfig = "
 
        set-option -sa terminal-overrides \",xterm*:Tc\"
