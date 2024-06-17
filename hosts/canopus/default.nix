@@ -190,7 +190,7 @@
           governor = "powersave";
           turbo = "never";
           scaling_min_freq = 400000;
-          scaling_max_freq = 1800000;
+          scaling_max_freq = 2800000;
         };
         charger = {
           governor = "powersave";
