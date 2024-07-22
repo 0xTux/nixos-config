@@ -11,5 +11,6 @@
     gimp
     obs-studio
     flameshot
+    chromium
   ];
 }
