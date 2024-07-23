@@ -129,6 +129,7 @@
     };
     nix-ld.enable = true;
     nm-applet.enable = true;
+    noisetorch.enable = true;
   };
 
   users = {
