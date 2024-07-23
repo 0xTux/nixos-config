@@ -5,7 +5,9 @@
 }: {
   services = {
     displayManager = {
-      enable = true;
+      sddm = {
+        enable = true;
+      };
     };
 
     xserver = {
