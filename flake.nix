@@ -44,12 +44,8 @@
       canopus = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs username;};
         modules = [
+          ./modules/nixos
           ./hosts/canopus
-
-          ./modules/nixos/desktop/awesome
-          ./modules/nixos/desktop/hyprland
-          ./modules/nixos/virtualisation
-          ./modules/nixos/steam.nix
 
           home-manager.nixosModules.home-manager
           {
@@ -59,9 +55,7 @@
             home-manager.users.${username} = {
               imports = [
                 ./modules/home-manager
-                ./modules/home-manager/hyprland
-                ./modules/home-manager/waybar
-                ./home/tux
+                ./hosts/canopus/home.nix
               ];
             };
           }
@@ -71,8 +65,8 @@
       controller = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs username;};
         modules = [
+          ./modules/nixos
           ./hosts/controller
-          ./modules/nixos/headscale.nix
 
           home-manager.nixosModules.home-manager
           {
@@ -91,6 +85,7 @@
       wsl = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs username;};
         modules = [
+          ./modules/nixos
           ./hosts/wsl
 
           home-manager.nixosModules.home-manager

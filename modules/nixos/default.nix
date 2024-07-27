@@ -1,20 +1,16 @@
 {
-  outputs,
   pkgs,
   username,
+  outputs,
   ...
 }: {
-  imports = [
-    ./hardware-configuration.nix
-    ../../modules/nixos/headscale.nix
-  ];
-
   nixpkgs = {
     overlays = [
       outputs.overlays.additions
       outputs.overlays.modifications
       outputs.overlays.unstable-packages
       outputs.overlays.nur
+      outputs.overlays.nix-vscode-extensions
     ];
 
     config = {
@@ -30,35 +26,37 @@
     };
   };
 
-  boot = {
-    kernelPackages = pkgs.linuxPackages_zen;
-    initrd.systemd.enable = true;
-
-    loader = {
-      grub.device = "/dev/sda";
-      timeout = 1;
+  time.timeZone = "Asia/Kolkata";
+  i18n = {
+    defaultLocale = "en_US.UTF-8";
+    extraLocaleSettings = {
+      LC_ADDRESS = "en_IN";
+      LC_IDENTIFICATION = "en_IN";
+      LC_MEASUREMENT = "en_IN";
+      LC_MONETARY = "en_IN";
+      LC_NAME = "en_IN";
+      LC_NUMERIC = "en_IN";
+      LC_PAPER = "en_IN";
+      LC_TELEPHONE = "en_IN";
+      LC_TIME = "en_IN";
     };
-  };
-
-  networking = {
-    hostName = "controller";
-  };
-
-  security = {
-    sudo.wheelNeedsPassword = false;
   };
 
   programs = {
     zsh.enable = true;
-    nix-ld.enable = true;
-    dconf.enable = true;
+    nh = {
+      enable = true;
+      clean.enable = true;
+      clean.extraArgs = "--keep-since 5d --keep 5";
+      flake = "/home/${username}/Projects/nixos-config";
+    };
   };
 
   services = {
     openssh = {
       enable = true;
       settings = {
-        PermitRootLogin = "no";
+        PasswordAuthentication = false;
       };
     };
   };
@@ -74,11 +72,4 @@
       ];
     };
   };
-
-  environment.systemPackages = with pkgs; [
-  ];
-
-  fonts.packages = with pkgs; [(nerdfonts.override {fonts = ["FiraCode" "JetBrainsMono"];})];
-
-  system.stateVersion = "23.11";
 }
