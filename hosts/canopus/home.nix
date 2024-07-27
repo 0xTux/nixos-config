@@ -47,5 +47,8 @@
     obs-studio
     flameshot
     chromium
+    libreoffice-qt
+    spotify
+    stremio
   ];
 }

@@ -62,13 +62,10 @@
     nodePackages.yarn
     rustup
     bun
-    stremio
     nixpkgs-fmt
     flyctl
     turso-cli
 
-    libreoffice-qt
-    spotify
     hunspell
     hunspellDicts.en_US
     galaxy-buds-client
