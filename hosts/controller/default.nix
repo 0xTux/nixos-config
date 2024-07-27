@@ -8,6 +8,7 @@
     ./hardware-configuration.nix
     ../../modules/nixos/headscale.nix
     ../../modules/nixos/vaultwarden.nix
+    ../../modules/nixos/uptime-kuma.nix
   ];
 
   nixpkgs = {
