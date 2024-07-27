@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  lib,
   ...
 }: {
   security = {
@@ -40,7 +41,7 @@
     };
 
     nginx = {
-      enable = true;
+      enable = lib.mkForce true;
       virtualHosts = {
         "hs.0xtux.com" = {
           forceSSL = true;
