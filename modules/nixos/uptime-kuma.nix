@@ -2,9 +2,6 @@
   services = {
     uptime-kuma = {
       enable = true;
-      settings = {
-        DATA_DIR = "/var/lib/uptime-kuma";
-      };
     };
 
     nginx = {
