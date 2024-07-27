@@ -13,7 +13,7 @@
     nginx = {
       enable = lib.mkForce true;
       virtualHosts = {
-        "vault.0xtux.com" = {
+        "bw.0xtux.com" = {
           forceSSL = true;
           enableACME = true;
           locations = {
