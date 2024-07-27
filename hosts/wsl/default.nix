@@ -20,6 +20,8 @@
     };
   };
 
+  networking.hostName = "wsl";
+
   programs = {
     ssh.startAgent = true;
     zsh.enable = true;
