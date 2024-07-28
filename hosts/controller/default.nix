@@ -9,6 +9,7 @@
     ../../modules/nixos/headscale.nix
     ../../modules/nixos/vaultwarden.nix
     ../../modules/nixos/uptime-kuma.nix
+    ../../modules/nixos/gitea.nix
   ];
 
   nixpkgs = {
