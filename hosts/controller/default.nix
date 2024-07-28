@@ -10,6 +10,9 @@
     ../../modules/nixos/vaultwarden.nix
     ../../modules/nixos/uptime-kuma.nix
     ../../modules/nixos/gitea.nix
+    ../../modules/nixos/monitoring/grafana.nix
+    ../../modules/nixos/monitoring/loki.nix
+    ../../modules/nixos/monitoring/promtail.nix
   ];
 
   nixpkgs = {
