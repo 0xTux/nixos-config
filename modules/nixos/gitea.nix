@@ -4,7 +4,10 @@
       enable = true;
       settings = {
         service.DISABLE_REGISTRATION = true;
-        server.DOMAIN = "git.0xtux.com";
+        server = {
+          DOMAIN = "git.0xtux.com";
+          ROOT_URL = "https://git.0xtux.com";
+        };
       };
     };
 
