@@ -18,7 +18,7 @@
     nginx = {
       enable = lib.mkForce true;
       virtualHosts = {
-        "grafana.0xtux.com" = {
+        "grafana.tux.rs" = {
           forceSSL = true;
           enableACME = true;
           locations = {

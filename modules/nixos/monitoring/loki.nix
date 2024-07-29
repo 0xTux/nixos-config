@@ -42,7 +42,7 @@
     nginx = {
       enable = lib.mkForce true;
       virtualHosts = {
-        "loki.0xtux.com" = {
+        "loki.tux.rs" = {
           forceSSL = true;
           enableACME = true;
           locations = {

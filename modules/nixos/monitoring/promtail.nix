@@ -12,7 +12,7 @@
         };
         clients = [
           {
-            url = "https://loki.0xtux.com/loki/api/v1/push";
+            url = "https://loki.tux.rs/loki/api/v1/push";
           }
         ];
         scrape_configs = [

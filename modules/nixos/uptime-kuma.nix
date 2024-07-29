@@ -7,7 +7,7 @@
     nginx = {
       enable = lib.mkForce true;
       virtualHosts = {
-        "uptime.0xtux.com" = {
+        "uptime.tux.rs" = {
           forceSSL = true;
           enableACME = true;
           locations = {

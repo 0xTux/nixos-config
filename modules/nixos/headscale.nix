@@ -19,13 +19,13 @@
       settings = {
         dns_config = {
           override_local_dns = true;
-          base_domain = "0xtux.com";
+          base_domain = "tux.rs";
           magic_dns = true;
           nameservers = [
             "1.1.1.1"
           ];
         };
-        server_url = "https://hs.0xtux.com";
+        server_url = "https://hs.tux.rs";
         metrics_listen_addr = "0.0.0.0:8095";
         logtail = {
           enabled = false;
@@ -43,7 +43,7 @@
     nginx = {
       enable = lib.mkForce true;
       virtualHosts = {
-        "hs.0xtux.com" = {
+        "hs.tux.rs" = {
           forceSSL = true;
           enableACME = true;
           locations = {

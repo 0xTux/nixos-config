@@ -5,8 +5,8 @@
       settings = {
         service.DISABLE_REGISTRATION = true;
         server = {
-          DOMAIN = "git.0xtux.com";
-          ROOT_URL = "https://git.0xtux.com";
+          DOMAIN = "git.tux.rs";
+          ROOT_URL = "https://git.tux.rs";
         };
       };
     };
@@ -14,7 +14,7 @@
     nginx = {
       enable = lib.mkForce true;
       virtualHosts = {
-        "git.0xtux.com" = {
+        "git.tux.rs" = {
           forceSSL = true;
           enableACME = true;
           locations = {

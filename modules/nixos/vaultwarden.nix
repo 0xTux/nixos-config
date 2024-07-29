@@ -3,7 +3,7 @@
     vaultwarden = {
       enable = true;
       config = {
-        domain = "https://vault.0xtux.com";
+        domain = "https://bw.tux.rs";
         enableWebsocket = true;
         signupsAllowed = true;
         disableIconDownload = true;
@@ -13,7 +13,7 @@
     nginx = {
       enable = lib.mkForce true;
       virtualHosts = {
-        "bw.0xtux.com" = {
+        "bw.tux.rs" = {
           forceSSL = true;
           enableACME = true;
           locations = {
