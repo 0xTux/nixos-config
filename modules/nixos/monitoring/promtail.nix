@@ -45,7 +45,7 @@
           enableACME = true;
           locations = {
             "/" = {
-              proxyPass = "http://localhost:3000";
+              proxyPass = "http://localhost:9080";
             };
           };
         };
