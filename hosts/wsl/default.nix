@@ -2,16 +2,24 @@
   pkgs,
   inputs,
   username,
+  config,
   ...
 }: {
   imports = [
     inputs.nixos-wsl.nixosModules.wsl
   ];
 
-  nixpkgs.hostPlatform = "x86_64-linux";
+  nixpkgs = {
+    config.cudaSupport = true;
+    hostPlatform = "x86_64-linux";
+  };
 
-  wsl.enable = true;
-  wsl.defaultUser = "${username}";
+  wsl = {
+    enable = true;
+    defaultUser = "${username}";
+    nativeSystemd = true;
+    useWindowsDriver = true;
+  };
 
   nix = {
     settings = {
@@ -25,12 +33,18 @@
   programs = {
     ssh.startAgent = true;
     zsh.enable = true;
-    nix-ld.enable = true;
+    nix-ld = {
+      enable = true;
+      libraries = config.hardware.opengl.extraPackages;
+    };
     dconf.enable = true;
   };
 
   services = {
-    ollama.enable = true;
+    ollama = {
+      enable = true;
+      acceleration = "cuda";
+    };
     openssh = {
       enable = true;
       settings = {
