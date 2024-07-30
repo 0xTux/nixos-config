@@ -1,4 +1,4 @@
-{...}: {
+{lib, ...}: {
   services = {
     promtail = {
       enable = true;
@@ -34,6 +34,21 @@
             ];
           }
         ];
+      };
+    };
+
+    nginx = {
+      enable = lib.mkForce true;
+      virtualHosts = {
+        "promtail.tux.rs" = {
+          forceSSL = true;
+          enableACME = true;
+          locations = {
+            "/" = {
+              proxyPass = "http://localhost:3000";
+            };
+          };
+        };
       };
     };
   };
