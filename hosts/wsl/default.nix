@@ -51,6 +51,7 @@
         PasswordAuthentication = false;
       };
     };
+    tailscale.enable = true;
   };
 
   users = {
