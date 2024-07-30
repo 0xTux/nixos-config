@@ -5,7 +5,7 @@
 </h1>
 
 # NixOS configuration flake
-![desktop](https://github.com/0xTux/nixos-config/assets/97862450/0c24b770-027d-41a8-ba15-19069e8068cc)
+![desktop](https://github.com/user-attachments/assets/4cc09401-4616-4a8e-968d-d7a2ffc8ae66)
 
 ## Installation
 
@@ -15,12 +15,16 @@ Currently there are 3 host's:
 2. **wsl**
    - Windows Subsytem for Linux
 3. **controller**
-   - Hetzner VPS
+   - Headscale
+   - Vaultwarden
+   - Gitea
+   - Uptime Kuma
+   - Grafana, Loki, Promtail
 
 Hosts can be build with:
 
 ```
-sudo nixos-rebuild switch --flake .#<HOSTNAME>
+nh os switch -H <HOSTNAME>
 ```
 
 ## Components
@@ -34,7 +38,7 @@ sudo nixos-rebuild switch --flake .#<HOSTNAME>
 | Hotkeys       | /       | Awful            |
 | Launcher      | /       | Rofi             |
 | Notifications | /       | Naughty          |
-| Terminal      | /       | Alacritty        |
+| Terminal      | /       | Wezterm          |
 | Editor        | /       | Neovim           |
 
 **Spent weeks on this system configuration 😢**
