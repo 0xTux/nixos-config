@@ -10,6 +10,11 @@
     ../../modules/nixos/default.nix
   ];
 
+  nixpkgs = {
+    config.cudaSupport = true;
+    hostPlatform = "x86_64-linux";
+  };
+
   wsl = {
     enable = true;
     defaultUser = "${username}";
