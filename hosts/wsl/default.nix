@@ -8,6 +8,7 @@
   imports = [
     inputs.nixos-wsl.nixosModules.wsl
     ../../modules/nixos/default.nix
+    ../../modules/nixos/virtualisation/docker.nix
   ];
 
   nixpkgs = {
