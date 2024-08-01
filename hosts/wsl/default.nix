@@ -27,10 +27,13 @@
   programs = {
     ssh.startAgent = true;
     zsh.enable = true;
+
     nix-ld = {
       enable = true;
       libraries = config.hardware.opengl.extraPackages;
+      package = pkgs.nix-ld-rs;
     };
+
     dconf.enable = true;
   };
 
