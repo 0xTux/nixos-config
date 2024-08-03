@@ -7,7 +7,7 @@
         ls = "lsd";
       };
       syntaxHighlighting.enable = true;
-      enableAutosuggestions = true;
+      autosuggestion.enable = true;
       initExtra = ''
         nitch
         export WINIT_X11_SCALE_FACTOR=1
@@ -44,7 +44,6 @@
     bore-cli
     fast-cli
     gdu
-    nvtop
     zip
     unzip
     pciutils

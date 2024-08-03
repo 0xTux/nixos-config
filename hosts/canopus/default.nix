@@ -57,7 +57,7 @@
   hardware = {
     bluetooth.enable = true;
     bluetooth.powerOnBoot = true;
-    opengl.driSupport32Bit = true;
+    graphics.enable32Bit = true;
   };
 
   security = {
@@ -129,8 +129,9 @@
         layout = "in";
         variant = "eng";
       };
-      libinput.touchpad.naturalScrolling = true;
     };
+
+    libinput.touchpad.naturalScrolling = true;
 
     # To use Auto-cpufreq we need to
     # disable TLP because it's enabled by nixos-hardware
