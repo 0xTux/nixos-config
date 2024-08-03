@@ -1,0 +1,7 @@
+keys:
+  - &primary age14vktfes95f33vuefwnmuvryas7az04u76dsgyhfvsx73czkvmp2q7njkl4
+creation_rules:
+  - path_regex: hosts/controller/secrets.yaml$
+    key_groups:
+      - age:
+          - *primary

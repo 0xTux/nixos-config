@@ -1,5 +1,12 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  inputs,
+  username,
+  config,
+  ...
+}: {
   imports = [
+    inputs.sops-nix.nixosModules.sops
     ./hardware-configuration.nix
     ../../modules/nixos/default.nix
     ../../modules/nixos/headscale.nix
@@ -10,6 +17,15 @@
     ../../modules/nixos/monitoring/loki.nix
     ../../modules/nixos/monitoring/promtail.nix
   ];
+
+  sops = {
+    age.keyFile = "/home/${username}/.config/sops/age/keys.txt";
+    secrets = {
+      borg_encryption_key = {
+        sopsFile = ./secrets.yaml;
+      };
+    };
+  };
 
   boot = {
     kernelPackages = pkgs.linuxPackages_zen;
@@ -27,6 +43,26 @@
 
   security = {
     sudo.wheelNeedsPassword = false;
+  };
+
+  services = {
+    borgbackup.jobs.controller-backup = {
+      paths = [
+        "/var/lib/bitwarden_rs"
+        "/var/lib/gitea"
+        "/var/lib/headscale"
+        "/var/lib/grafana"
+        "/var/lib/loki"
+      ];
+      encryption = {
+        mode = "repokey-blake2";
+        passCommand = "cat ${config.sops.secrets.borg_encryption_key.path}";
+      };
+      environment.BORG_RSH = "ssh -i /home/${username}/.ssh/storagebox";
+      repo = "ssh://u416910@u416910.your-storagebox.de:23/./controller-backups";
+      compression = "auto,zstd";
+      startAt = "daily";
+    };
   };
 
   programs = {
