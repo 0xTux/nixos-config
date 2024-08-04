@@ -102,6 +102,26 @@
           }
         ];
       };
+
+      isoImage = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs outputs username;};
+        modules = [
+          ./modules/nixos
+          ./hosts/isoImage
+
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.backupFileExtension = "backup";
+            home-manager.useUserPackages = true;
+            home-manager.extraSpecialArgs = {inherit inputs outputs username;};
+            home-manager.users.${username} = {
+              imports = [
+                ./modules/home-manager
+              ];
+            };
+          }
+        ];
+      };
     };
 
     # Standalone home-manager configuration entrypoint
