@@ -19,6 +19,7 @@
         ssh_only = false;
         format = "[$ssh_symbol$hostname]($style) ";
         style = "bold green";
+        ssh_symbol = "󰇧 ";
         disabled = false;
       };
       rust = {
@@ -27,15 +28,15 @@
       };
       golang = {
         format = "[$symbol]($style)";
-        symbol = "� ";
+        symbol = " ";
       };
       solidity = {
         format = "[$symbol]($style)";
-        symbol = "� ";
+        symbol = "󰡪 ";
       };
       nodejs = {
         format = "[$symbol]($style)";
-        symbol = "� ";
+        symbol = "󰎙 ";
       };
     };
   };
