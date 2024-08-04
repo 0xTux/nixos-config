@@ -7,6 +7,7 @@
     inputs.nixos-hardware.nixosModules.asus-zephyrus-ga503
     ./hardware-configuration.nix
     ../../modules/nixos/default.nix
+    ../../modules/nixos/desktop
     ../../modules/nixos/desktop/awesome
     ../../modules/nixos/desktop/hyprland
     ../../modules/nixos/virtualisation
