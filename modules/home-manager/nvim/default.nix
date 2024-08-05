@@ -1,6 +1,9 @@
 {pkgs, ...}: {
-  xdg.configFile."nvim" = {
-    source = "${pkgs.nvchad}";
+  home.file = {
+    ".config/nvim" = {
+      recursive = true;
+      source = "${pkgs.tux-nvim-config}";
+    };
   };
 
   programs = {

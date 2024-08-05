@@ -5,7 +5,7 @@
   nvim = ./nvim;
 in
   stdenv.mkDerivation {
-    pname = "nvchad";
+    pname = "tux-nvim-config";
     version = "2.5.0";
 
     buildCommand = ''
@@ -14,8 +14,8 @@ in
     '';
 
     meta = with lib; {
-      description = "NvChad";
-      homepage = "https://github.com/NvChad/NvChad";
+      description = "tux's nvim config";
+      homepage = "https://tux.rs";
       platforms = platforms.all;
       license = licenses.gpl3;
     };
