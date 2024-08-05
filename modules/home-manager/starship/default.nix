@@ -14,8 +14,8 @@
         symbols.NixOS = "󰊠";
       };
       directory = {
-        format = "[$path]($style)[ $read_only]($read_only_style) ";
-        read_only = "󰌾";
+        format = "[$path]($style)[$read_only ]($read_only_style)";
+        read_only = " 󰌾";
         style = "bold blue";
       };
       git_branch.format = "[$symbol$branch]($style) ";
