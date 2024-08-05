@@ -6,7 +6,10 @@
   services = {
     displayManager = {
       sddm = {
+        package = pkgs.libsForQt5.sddm;
+        extraPackages = with pkgs; [libsForQt5.qt5.qtgraphicaleffects];
         enable = true;
+        theme = "sugar-dark";
       };
     };
 
@@ -70,5 +73,6 @@
     sct
     slop
     speedcrunch
+    sddm-sugar-dark
   ];
 }
