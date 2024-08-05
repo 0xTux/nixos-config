@@ -41,11 +41,9 @@
 
   environment.systemPackages = with pkgs; [
     luajit
-    wezterm
     acpi
     linuxKernel.packages.linux_zen.acpi_call
     lxappearance
-    jq
     inotify-tools
     polkit_gnome
     xdotool
@@ -63,7 +61,6 @@
     mpd
     mpc-cli
     mpdris2
-    python311
     python311Packages.mutagen
     ncmpcpp
     xdg-utils
@@ -72,7 +69,6 @@
     procps
     sct
     slop
-    speedcrunch
     sddm-sugar-dark
   ];
 }

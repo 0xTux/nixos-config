@@ -54,6 +54,7 @@
     nix-output-monitor
     fzf
     duf
+    jq
 
     python311
     nodejs
