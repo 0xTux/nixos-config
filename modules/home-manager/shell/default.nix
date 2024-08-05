@@ -11,6 +11,8 @@
       initExtra = ''
         nitch
         export WINIT_X11_SCALE_FACTOR=1
+        bindkey "^A" vi-beginning-of-line
+        bindkey "^E" vi-end-of-line
       '';
     };
     lazygit.enable = true;
