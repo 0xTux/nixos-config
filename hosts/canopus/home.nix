@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   imports = [
+    ../../modules/home-manager/awesome
     ../../modules/home-manager/hyprland
     ../../modules/home-manager/waybar
     ../../modules/home-manager/picom
