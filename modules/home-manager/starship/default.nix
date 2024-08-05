@@ -13,7 +13,11 @@
         disabled = false;
         symbols.NixOS = "󰊠";
       };
-      directory.style = "bold blue";
+      directory = {
+        format = "[$path]($style)[ $read_only]($read_only_style) ";
+        read_only = "󰌾";
+        style = "bold blue";
+      };
       git_branch.format = "[$symbol$branch]($style) ";
       hostname = {
         ssh_only = false;
