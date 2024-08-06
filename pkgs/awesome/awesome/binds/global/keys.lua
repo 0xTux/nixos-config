@@ -15,7 +15,7 @@ awful.keyboard.append_global_keybindings({
     { description = "show help", group = "awesome" }
   ),
   awful.key({ modkey, mod.shift }, "r", awesome.restart, { description = "reload awesome", group = "awesome" }),
-  awful.key({ modkey, mod.shift }, "q", awesome.quit, { description = "quit awesome", group = "awesome" }),
+  awful.key({ modkey, mod.shift }, "x", awesome.quit, { description = "quit awesome", group = "awesome" }),
 
   -- Apps related keybindings
   awful.key({ modkey }, "a", function()
