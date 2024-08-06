@@ -66,4 +66,14 @@ ruled.client.connect_signal("request::rules", function()
     rule = { class = "discord" },
     properties = { screen = 1, tag = "4" },
   })
+
+  ruled.client.append_rule({
+    rule = { class = "spotify" },
+    properties = { screen = 1, tag = "4" },
+  })
+
+  ruled.client.append_rule({
+    rule = { class = "telegram-desktop" },
+    properties = { screen = 1, tag = "4" },
+  })
 end)
