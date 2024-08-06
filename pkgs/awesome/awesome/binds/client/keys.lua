@@ -14,6 +14,11 @@ client.connect_signal("request::default_keybindings", function()
     awful.key({ modkey }, "q", function(c)
       c:kill()
     end, { description = "close", group = "client" }),
+    awful.key({ modkey, mod.shift }, "q", function(c)
+      if c.pid then
+        awful.spawn("kill -9 " .. c.pid)
+      end
+    end, { description = "force close", group = "client" }),
     awful.key({ modkey }, "space", awful.client.floating.toggle, { description = "toggle floating", group = "client" }),
   })
 end)
