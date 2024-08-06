@@ -50,6 +50,7 @@
     unzip
     pciutils
     gnumake
+    nvtopPackages.full
     copyq
     zellij
     cht-sh
