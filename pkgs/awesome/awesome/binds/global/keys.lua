@@ -16,12 +16,39 @@ awful.keyboard.append_global_keybindings({
   ),
   awful.key({ modkey, mod.shift }, "r", awesome.restart, { description = "reload awesome", group = "awesome" }),
   awful.key({ modkey, mod.shift }, "q", awesome.quit, { description = "quit awesome", group = "awesome" }),
-  awful.key({ modkey }, "Return", function()
-    awful.spawn(apps.terminal)
-  end, { description = "open a terminal", group = "launcher" }),
+
+  -- Apps related keybindings
   awful.key({ modkey }, "a", function()
     awful.spawn("rofi -show drun")
   end, { description = "run prompt", group = "launcher" }),
+
+  awful.key({ modkey }, "Return", function()
+    awful.spawn(apps.terminal)
+  end, { description = "open terminal", group = "launcher" }),
+
+  awful.key({ modkey, mod.shift }, "Return", function()
+    awful.spawn(apps.terminal_floating)
+  end, { description = "open floating terminal", group = "launcher" }),
+
+  awful.key({ modkey }, "v", function()
+    awful.spawn(apps.editor_cmd)
+  end, { description = "open neovim", group = "launcher" }),
+
+  awful.key({ modkey }, "n", function()
+    awful.spawn(apps.neovide)
+  end, { description = "open neovide", group = "launcher" }),
+
+  awful.key({ modkey }, "b", function()
+    awful.spawn(apps.browser)
+  end, { description = "open browser", group = "launcher" }),
+
+  awful.key({ modkey }, "d", function()
+    awful.spawn("discord")
+  end, { description = "open discord", group = "launcher" }),
+
+  awful.key({ modkey }, "t", function()
+    awful.spawn(apps.file_explorer)
+  end, { description = "open file explorer", group = "launcher" }),
 
   -- Focus related keybindings.
   awful.key({ modkey }, "Left", function()

@@ -22,6 +22,7 @@
       "90:class_g = 'discord'"
       "90:class_g = 'code'"
       "90:class_g = 'org.wezfurlong.wezterm'"
+      "90:class_g = 'wezterm-floating'"
     ];
 
     settings = {

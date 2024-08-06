@@ -25,17 +25,13 @@ ruled.client.connect_signal("request::rules", function()
         "Arandr",
         ".blueman-manager-wrapped",
         "Gpick",
-      },
-      -- Note that the name property shown in xprop might be set slightly after creation of the client
-      -- and the name shown there might not match defined rules here.
-      name = {
-        "Event Tester", -- xev.
-      },
-      role = {
-        "pop-up", -- e.g. Google Chrome's (detached) Developer Tools.
+        "wezterm-floating",
       },
     },
-    properties = { floating = true },
+    properties = {
+      floating = true,
+      placement = awful.placement.centered,
+    },
   })
 
   -- Add titlebars to normal clients and dialogs.
@@ -45,9 +41,29 @@ ruled.client.connect_signal("request::rules", function()
   --   properties = { titlebars_enabled = true },
   -- })
 
-  -- Set Firefox to always map on the tag named '2' on screen 1.
-  -- ruled.client.append_rule({
-  --    rule       = { class = 'Firefox'     },
-  --    properties = { screen = 1, tag = '2' }
-  -- })
+  -- Map newly created windows to specific tags
+  ruled.client.append_rule({
+    rule = { class = "org.wezfurlong.wezterm" },
+    properties = { screen = 1, tag = "1" },
+  })
+
+  ruled.client.append_rule({
+    rule = { class = "neovide" },
+    properties = { screen = 1, tag = "1" },
+  })
+
+  ruled.client.append_rule({
+    rule = { class = "firefox" },
+    properties = { screen = 1, tag = "3" },
+  })
+
+  ruled.client.append_rule({
+    rule = { class = "Thunar" },
+    properties = { screen = 1, tag = "3" },
+  })
+
+  ruled.client.append_rule({
+    rule = { class = "discord" },
+    properties = { screen = 1, tag = "4" },
+  })
 end)
