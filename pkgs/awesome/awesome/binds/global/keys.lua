@@ -50,6 +50,10 @@ awful.keyboard.append_global_keybindings({
     awful.spawn(apps.file_explorer)
   end, { description = "open file explorer", group = "launcher" }),
 
+  awful.key({ modkey }, "s", function()
+    awful.spawn("spotify")
+  end, { description = "open spotify", group = "launcher" }),
+
   -- Focus related keybindings.
   awful.key({ modkey }, "Left", function()
     awful.client.focus.bydirection("left")
