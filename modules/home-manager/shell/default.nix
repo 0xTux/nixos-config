@@ -74,5 +74,6 @@
     galaxy-buds-client
     air
     templ
+    ffmpeg
   ];
 }
