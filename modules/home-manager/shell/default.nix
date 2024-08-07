@@ -38,6 +38,7 @@
   };
 
   home.packages = with pkgs; [
+    service-wrapper
     lsd
     nitch
     ranger
