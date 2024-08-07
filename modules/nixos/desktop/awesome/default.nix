@@ -31,7 +31,6 @@
     };
 
     acpid.enable = true;
-    mpd.enable = true;
     picom.enable = true;
     upower.enable = true;
     blueman.enable = true;
@@ -50,19 +49,14 @@
     xclip
     xorg.xbacklight
     gpick
-    ffmpeg
     alsa-utils
     pavucontrol
     brightnessctl
     libnotify
     feh
     maim
-    mpv
-    mpd
-    mpc-cli
     mpdris2
     python311Packages.mutagen
-    ncmpcpp
     xdg-utils
     playerctl
     pulsemixer
