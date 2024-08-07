@@ -17,6 +17,10 @@ awful.keyboard.append_global_keybindings({
   awful.key({ modkey, mod.shift }, "r", awesome.restart, { description = "reload awesome", group = "awesome" }),
   awful.key({ modkey, mod.shift }, "x", awesome.quit, { description = "quit awesome", group = "awesome" }),
 
+  awful.key({ modkey, mod.shift }, "p", function()
+    awful.spawn.with_shell("poweroff")
+  end, { description = "poweroff", group = "awesome" }),
+
   -- Apps related keybindings
   awful.key({ modkey }, "a", function()
     awful.spawn("rofi -show drun")
