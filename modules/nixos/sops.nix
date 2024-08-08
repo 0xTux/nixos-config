@@ -1,6 +1,7 @@
 {
   inputs,
   config,
+  pkgs,
   ...
 }: let
   isEd25519 = k: k.type == "ed25519";
@@ -14,4 +15,6 @@ in {
     keyFile = "/var/lib/sops-nix/key.txt";
     generateKey = true;
   };
+
+  environment.systemPackages = with pkgs; [sops];
 }
