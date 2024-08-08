@@ -1,27 +1,37 @@
-<h1 align="center">
-  0xTux/nixos-config
+<h3 align="center">
+  tux's NixOS Flake
+</h3>
+<p align="center">
+  <a href="https://wakatime.com/badge/user/012e8da9-99fe-4600-891b-bd9d8dce73d9/project/312e6509-0e4f-47b7-b5de-54985b546702" target="_blank"><img alt="home" src="https://wakatime.com/badge/user/012e8da9-99fe-4600-891b-bd9d8dce73d9/project/312e6509-0e4f-47b7-b5de-54985b546702.svg"></a>
+  <a href="https://builtwithnix.org" target="_blank"><img alt="home" src="https://img.shields.io/static/v1?logo=nixos&logoColor=white&label=&message=Built%20with%20Nix&color=41439a"></a>
+  <a href="https://builtwithnix.org](https://github.com/zemmsoares/awesome-rices" target="_blank"><img alt="home" src="https://raw.githubusercontent.com/zemmsoares/awesome-rices/main/assets/awesome-rice-badge.svg"></a>
+</p>
+<p align="center">
+	<img src="https://github.com/user-attachments/assets/fc28c35f-b87a-4931-ae7f-c231a11fd1a3" alt="desktop">
+</p>
 
-  [![wakatime](https://wakatime.com/badge/user/012e8da9-99fe-4600-891b-bd9d8dce73d9/project/312e6509-0e4f-47b7-b5de-54985b546702.svg)](https://wakatime.com/badge/user/012e8da9-99fe-4600-891b-bd9d8dce73d9/project/312e6509-0e4f-47b7-b5de-54985b546702)
-  [![built with nix](https://img.shields.io/static/v1?logo=nixos&logoColor=white&label=&message=Built%20with%20Nix&color=41439a)](https://builtwithnix.org)
-</h1>
+## Table of Contents
+- [Hosts](#hosts)
+- [Installation](#installation)
+- [Components](#components)
+- [Showcase](#showcase)
+- [Pain](#spent-weeks-on-this-system-configuration-)
 
-# NixOS configuration flake
-![desktop](https://github.com/user-attachments/assets/4cc09401-4616-4a8e-968d-d7a2ffc8ae66)
-
-## Installation
-
-Currently there are 3 host's:
-1. **canopus**
-   - Asus Zephyrus G15
-2. **wsl**
-   - Windows Subsytem for Linux
-3. **controller**
+## Hosts
+Currently there are 5 host's:
+1. **canopus:** Asus Zephyrus G15, powered by a Ryzen 9 5900HS and RTX 3060, optimized for productivity on the go.
+2. **wsl:** Multi-monitor desktop running Windows Subsystem for Linux, backed by a Ryzen 5 3600 (bottleneck ik) and RTX 3080 TI. This setup is utilized for both development and gaming.
+3. **controller:** Primary server responsible for exposing my homelab applications to the internet.
    - Headscale
    - Vaultwarden
    - Gitea
    - Uptime Kuma
    - Grafana, Loki, Promtail
+4. **homelab:** WIP, Migrating from unraid.
+5. **node:** Secondary server dedicated to running Ethereum and BSC nodes. Currently in the process of migrating from Ubuntu.
+  
 
+## Installation
 Hosts can be build with:
 
 ```
@@ -42,7 +52,28 @@ nh os switch -H <HOSTNAME>
 | Terminal      | /       | Wezterm          |
 | Editor        | /       | Neovim           |
 
-**Spent weeks on this system configuration 😢**
+## Showcase
+### Desktop
+![2024-08-08_18-33](https://github.com/user-attachments/assets/1cdcc387-0f68-486c-a76c-a36ad2acb78d)
+
+![2024-08-08_18-18](https://github.com/user-attachments/assets/f3fc4da5-6c0d-4cda-934d-b68ca6494e02)
+
+### Neovim
+![2024-08-08_18-16](https://github.com/user-attachments/assets/f881c672-8d77-43ec-b637-df5004c7d11f)
+
+### Floating Terminal
+![2024-08-08_18-16_1](https://github.com/user-attachments/assets/3339ecf8-3264-4179-a093-337c844592a6)
+
+### Lazygit
+![2024-08-08_18-16_2](https://github.com/user-attachments/assets/6df15881-fc2b-41b1-af3b-124fe0599b94)
+
+### Telescope
+![2024-08-08_18-16_3](https://github.com/user-attachments/assets/03be05bc-8ede-4d6e-a341-2761d89b7288)
+
+### Firefox
+![2024-08-08_18-26](https://github.com/user-attachments/assets/6f12173b-2480-404e-b01a-599115a886c0)
+
+
+## Spent weeks on this system configuration 😢
 
 <img src="https://user-images.githubusercontent.com/97862450/265550523-2f66a8b6-4347-40af-89c6-12db3a61cc7c.jpeg" width="50%" />
-
