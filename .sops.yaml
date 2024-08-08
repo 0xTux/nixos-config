@@ -1,7 +1,32 @@
 keys:
-  - &primary age14vktfes95f33vuefwnmuvryas7az04u76dsgyhfvsx73czkvmp2q7njkl4
+  - &users
+    - &tux age14vktfes95f33vuefwnmuvryas7az04u76dsgyhfvsx73czkvmp2q7njkl4
+
+  - &hosts
+    - &canopus age1cc9phftkzcwaey2rw63m74tyxdjxxzanxphsdrhy6vwlwhgehfzq9rh6e4
+    - &controller age1zsl5d4vj6gl3h96y5p53sq5y4vr4vtlwp727h7rp9a4xfkxm53lqrh6r50
+    - &wsl age168lay0z8yfa5hcsmz3aq5yndjhmugrsk3v3x4t3hpw29m20tkcwsaxx2fz
+
 creation_rules:
+  - path_regex: hosts/common/secrets.yaml$
+    key_groups:
+      - age:
+          - *tux
+          - *canopus
+          - *controller
+          - *wsl
+  - path_regex: hosts/canopus/secrets.yaml$
+    key_groups:
+      - age:
+          - *tux
+          - *canopus
   - path_regex: hosts/controller/secrets.yaml$
     key_groups:
       - age:
-          - *primary
+          - *tux
+          - *controller
+  - path_regex: hosts/wsl/secrets.yaml$
+    key_groups:
+      - age:
+          - *tux
+          - *wsl

@@ -2,8 +2,18 @@
   pkgs,
   username,
   outputs,
+  config,
   ...
 }: {
+  imports = [
+    ../../modules/nixos/sops.nix
+  ];
+
+  sops.secrets.tux-password = {
+    sopsFile = ./secrets.yaml;
+    neededForUsers = true;
+  };
+
   nixpkgs = {
     overlays = [
       outputs.overlays.additions
@@ -62,9 +72,10 @@
   };
 
   users = {
+    mutableUsers = false;
     defaultUserShell = pkgs.zsh;
     users.${username} = {
-      initialPassword = "${username}";
+      hashedPasswordFile = config.sops.secrets.tux-password.path;
       isNormalUser = true;
       extraGroups = ["networkmanager" "wheel" "storage"];
       openssh.authorizedKeys.keys = [

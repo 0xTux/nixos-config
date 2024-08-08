@@ -1,12 +1,10 @@
 {
   pkgs,
-  inputs,
   username,
   config,
   ...
 }: {
   imports = [
-    inputs.sops-nix.nixosModules.sops
     ./hardware-configuration.nix
     ../common
     ../../modules/nixos/headscale.nix
@@ -18,13 +16,8 @@
     ../../modules/nixos/monitoring/promtail.nix
   ];
 
-  sops = {
-    age.keyFile = "/home/${username}/.config/sops/age/keys.txt";
-    secrets = {
-      borg_encryption_key = {
-        sopsFile = ./secrets.yaml;
-      };
-    };
+  sops.secrets.borg_encryption_key = {
+    sopsFile = ./secrets.yaml;
   };
 
   boot = {
