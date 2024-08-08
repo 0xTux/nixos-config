@@ -45,7 +45,6 @@
       canopus = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs username;};
         modules = [
-          ./modules/nixos
           ./hosts/canopus
 
           home-manager.nixosModules.home-manager
@@ -55,7 +54,6 @@
             home-manager.extraSpecialArgs = {inherit inputs outputs username;};
             home-manager.users.${username} = {
               imports = [
-                ./modules/home-manager
                 ./hosts/canopus/home.nix
               ];
             };
@@ -66,7 +64,6 @@
       controller = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs username;};
         modules = [
-          ./modules/nixos
           ./hosts/controller
 
           home-manager.nixosModules.home-manager
@@ -76,7 +73,7 @@
             home-manager.extraSpecialArgs = {inherit inputs outputs username;};
             home-manager.users.${username} = {
               imports = [
-                ./modules/home-manager
+                ./hosts/controller/home.nix
               ];
             };
           }
@@ -86,7 +83,6 @@
       wsl = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs username;};
         modules = [
-          ./modules/nixos
           ./hosts/wsl
 
           home-manager.nixosModules.home-manager
@@ -96,7 +92,7 @@
             home-manager.extraSpecialArgs = {inherit inputs outputs username;};
             home-manager.users.${username} = {
               imports = [
-                ./modules/home-manager
+                ./hosts/wsl/home.nix
               ];
             };
           }
@@ -106,7 +102,6 @@
       isoImage = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs username;};
         modules = [
-          ./modules/nixos
           ./hosts/isoImage
 
           home-manager.nixosModules.home-manager
@@ -116,7 +111,7 @@
             home-manager.extraSpecialArgs = {inherit inputs outputs username;};
             home-manager.users.${username} = {
               imports = [
-                ./modules/home-manager
+                ./hosts/isoImage/home.nix
               ];
             };
           }

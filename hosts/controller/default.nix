@@ -8,7 +8,7 @@
   imports = [
     inputs.sops-nix.nixosModules.sops
     ./hardware-configuration.nix
-    ../../modules/nixos/default.nix
+    ../common
     ../../modules/nixos/headscale.nix
     ../../modules/nixos/vaultwarden.nix
     ../../modules/nixos/uptime-kuma.nix

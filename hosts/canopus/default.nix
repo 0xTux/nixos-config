@@ -6,7 +6,7 @@
   imports = [
     inputs.nixos-hardware.nixosModules.asus-zephyrus-ga503
     ./hardware-configuration.nix
-    ../../modules/nixos/default.nix
+    ../common
     ../../modules/nixos/desktop
     ../../modules/nixos/desktop/awesome
     ../../modules/nixos/desktop/hyprland

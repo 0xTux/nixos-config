@@ -7,7 +7,7 @@
 }: {
   imports = [
     inputs.nixos-wsl.nixosModules.wsl
-    ../../modules/nixos/default.nix
+    ../common
     ../../modules/nixos/virtualisation/docker.nix
   ];
 

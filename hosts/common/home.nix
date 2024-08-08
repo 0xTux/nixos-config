@@ -4,12 +4,12 @@
   ...
 }: {
   imports = [
-    ./shell
-    ./git
-    ./starship
-    ./nvim
-    ./tmux
-    ./helix
+    ../../modules/home-manager/shell
+    ../../modules/home-manager/git
+    ../../modules/home-manager/starship
+    ../../modules/home-manager/nvim
+    ../../modules/home-manager/tmux
+    ../../modules/home-manager/helix
   ];
 
   nixpkgs = {
