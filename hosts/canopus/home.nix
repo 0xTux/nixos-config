@@ -12,6 +12,7 @@
     ../../modules/home-manager/firefox
     ../../modules/home-manager/kdeconnect
     ../../modules/home-manager/vs-code
+    ../../modules/home-manager/mopidy
   ];
 
   home.pointerCursor = {
