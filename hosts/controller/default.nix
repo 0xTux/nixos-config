@@ -14,6 +14,7 @@
     ../../modules/nixos/monitoring/grafana.nix
     ../../modules/nixos/monitoring/loki.nix
     ../../modules/nixos/monitoring/promtail.nix
+    ../../modules/nixos/ntfy-sh.nix
   ];
 
   sops.secrets.borg_encryption_key = {
@@ -46,6 +47,7 @@
         "/var/lib/headscale"
         "/var/lib/grafana"
         "/var/lib/loki"
+        "/var/lib/ntfy-sh"
       ];
       encryption = {
         mode = "repokey-blake2";
