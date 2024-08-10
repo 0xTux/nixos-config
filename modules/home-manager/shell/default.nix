@@ -59,6 +59,9 @@
     fzf
     duf
     jq
+    atac
+    termshark
+    sshs
 
     python311
     nodejs
