@@ -28,6 +28,11 @@
     };
   };
 
+  programs.nix-index = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+
   home = {
     username = "${username}";
     homeDirectory = "/home/${username}";
