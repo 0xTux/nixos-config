@@ -10,6 +10,7 @@
     ../../modules/home-manager/nvim
     ../../modules/home-manager/tmux
     ../../modules/home-manager/helix
+    ../../modules/home-manager/aria2
   ];
 
   nixpkgs = {
