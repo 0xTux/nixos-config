@@ -47,7 +47,8 @@
         "/var/lib/headscale"
         "/var/lib/grafana"
         "/var/lib/loki"
-        "/var/lib/ntfy-sh"
+        "/var/lib/private/ntfy-sh"
+        "/var/lib/private/uptime-kuma"
       ];
       encryption = {
         mode = "repokey-blake2";
