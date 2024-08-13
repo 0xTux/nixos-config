@@ -41,7 +41,12 @@ theme.border_color_marked = "#91231c"
 -- Example:
 theme.taglist_bg_focus = "#54CDB3"
 theme.taglist_fg_focus = "#0f0f0f"
+theme.taglist_bg_urgent = "#E9E8BB"
+theme.taglist_fg_urgent = "#0f0f0f"
+
 theme.tasklist_bg_focus = "#252525"
+theme.tasklist_bg_urgent = "#E9E8BB"
+theme.tasklist_fg_urgent = "#0f0f0f"
 
 -- Variables set for theming notifications:
 -- notification_font
