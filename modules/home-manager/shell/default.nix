@@ -75,7 +75,6 @@
 
     hunspell
     hunspellDicts.en_US
-    galaxy-buds-client
     air
     templ
     ffmpeg
