@@ -15,10 +15,17 @@
     ../../modules/nixos/monitoring/loki.nix
     ../../modules/nixos/monitoring/promtail.nix
     ../../modules/nixos/ntfy-sh.nix
+    ../../modules/nixos/searx.nix
   ];
 
-  sops.secrets.borg_encryption_key = {
-    sopsFile = ./secrets.yaml;
+  sops.secrets = {
+    borg_encryption_key = {
+      sopsFile = ./secrets.yaml;
+    };
+
+    searx_secret_key = {
+      sopsFile = ./secrets.yaml;
+    };
   };
 
   boot = {
