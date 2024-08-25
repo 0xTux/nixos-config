@@ -1,13 +1,14 @@
 {
   pkgs,
   lib,
+  config,
   ...
 }: {
   services = {
     searx = {
       enable = true;
       package = pkgs.searxng;
-      environmentFile = "/run/secrets/searx_secret_key";
+      environmentFile = config.sops.secrets.searx_secret_key.path;
       settings = {
         general = {
           instance_name = "SearXNG";
