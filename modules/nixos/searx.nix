@@ -19,6 +19,9 @@
           base_url = "https://sx.tux.rs";
           secret_key = "@secret_key@";
         };
+        search = {
+          autocomplete = "google";
+        };
       };
     };
 
