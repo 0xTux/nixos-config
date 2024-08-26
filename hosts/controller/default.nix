@@ -73,6 +73,13 @@
   users.users.nginx.extraGroups = ["acme"];
 
   services = {
+    nginx = {
+      recommendedGzipSettings = true;
+      recommendedOptimisation = true;
+      recommendedProxySettings = true;
+      recommendedTlsSettings = true;
+    };
+
     borgbackup.jobs.controller-backup = {
       paths = [
         "/var/lib/bitwarden_rs"
