@@ -45,7 +45,7 @@
       virtualHosts = {
         "hs.tux.rs" = {
           forceSSL = true;
-          enableACME = true;
+          useACMEHost = "tux.rs";
           locations = {
             "/" = {
               proxyPass = "http://localhost:${toString config.services.headscale.port}";

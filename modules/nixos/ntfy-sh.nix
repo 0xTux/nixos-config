@@ -14,7 +14,7 @@
       virtualHosts = {
         "ntfy.tux.rs" = {
           forceSSL = true;
-          enableACME = true;
+          useACMEHost = "tux.rs";
           locations = {
             "/" = {
               proxyPass = "http://localhost:7070";

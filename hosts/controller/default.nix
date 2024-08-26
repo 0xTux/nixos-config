@@ -26,6 +26,14 @@
     searx_secret_key = {
       sopsFile = ./secrets.yaml;
     };
+
+    "cloudflare_credentials/email" = {
+      sopsFile = ./secrets.yaml;
+    };
+
+    "cloudflare_credentials/dns_api_token" = {
+      sopsFile = ./secrets.yaml;
+    };
   };
 
   boot = {
@@ -44,7 +52,25 @@
 
   security = {
     sudo.wheelNeedsPassword = false;
+
+    acme = {
+      acceptTerms = true;
+      defaults.email = "0xtux@pm.me";
+      certs = {
+        "tux.rs" = {
+          domain = "*.tux.rs";
+          extraDomainNames = ["tux.rs"];
+          dnsProvider = "cloudflare";
+          credentialFiles = {
+            CLOUDFLARE_EMAIL_FILE = config.sops.secrets."cloudflare_credentials/email".path;
+            CLOUDFLARE_DNS_API_TOKEN_FILE = config.sops.secrets."cloudflare_credentials/dns_api_token".path;
+          };
+        };
+      };
+    };
   };
+
+  users.users.nginx.extraGroups = ["acme"];
 
   services = {
     borgbackup.jobs.controller-backup = {
