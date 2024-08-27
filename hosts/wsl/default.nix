@@ -31,7 +31,7 @@
 
     nix-ld = {
       enable = true;
-      libraries = config.hardware.opengl.extraPackages;
+      libraries = config.hardware.graphics.extraPackages;
       package = pkgs.nix-ld-rs;
     };
 
