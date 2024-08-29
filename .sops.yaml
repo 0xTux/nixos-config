@@ -5,7 +5,7 @@ keys:
   - &hosts
     - &canopus age1cc9phftkzcwaey2rw63m74tyxdjxxzanxphsdrhy6vwlwhgehfzq9rh6e4
     - &controller age1zsl5d4vj6gl3h96y5p53sq5y4vr4vtlwp727h7rp9a4xfkxm53lqrh6r50
-    - &wsl age1agycpvn43d66wgw9qdtrpv75eq97xr72xtzpese8tmzc2xhzlcksfyvn4g
+    - &wsl age1lyvzg4ud96trsuv6gsvjw0p3rtd6qjpyl9uleq8hcrzwekuhpfesnlqauf
 
 creation_rules:
   - path_regex: hosts/common/secrets.yaml$
