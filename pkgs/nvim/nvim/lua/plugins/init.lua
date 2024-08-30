@@ -195,5 +195,12 @@ local plugins = {
       "nvim-tree/nvim-web-devicons",
     },
   },
+  {
+    "ibhagwan/smartyank.nvim",
+    event = "VeryLazy",
+    config = function()
+      require("configs.smart-yank")
+    end,
+  },
 }
 return plugins
