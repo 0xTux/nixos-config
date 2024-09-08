@@ -3,6 +3,11 @@
 
   modifications = final: prev: {
     awesome = inputs.nixpkgs-f2k.packages.${prev.system}.awesome-git;
+
+    discord = prev.discord.override {
+      withOpenASAR = true;
+      withVencord = true;
+    };
   };
 
   # When applied, the unstable nixpkgs set (declared in the flake inputs) will
