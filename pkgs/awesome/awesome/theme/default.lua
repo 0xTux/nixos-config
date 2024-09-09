@@ -26,7 +26,7 @@ theme.useless_gap = dpi(6)
 theme.border_width = dpi(2)
 theme.border_radius = dpi(8)
 theme.border_color_normal = "#aae6d9"
-theme.border_color_active = "#54CDB3"
+theme.border_color_active = "#35F4A6"
 theme.border_color_marked = "#91231c"
 
 -- There are other variable sets
@@ -39,7 +39,7 @@ theme.border_color_marked = "#91231c"
 -- prompt_[fg|bg|fg_cursor|bg_cursor|font]
 -- hotkeys_[bg|fg|border_width|border_color|shape|opacity|modifiers_fg|label_bg|label_fg|group_margin|font|description_font]
 -- Example:
-theme.taglist_bg_focus = "#54CDB3"
+theme.taglist_bg_focus = "#35F4A6"
 theme.taglist_fg_focus = "#0f0f0f"
 theme.taglist_bg_urgent = "#E9E8BB"
 theme.taglist_fg_urgent = "#0f0f0f"
@@ -93,7 +93,7 @@ theme.titlebar_maximized_button_focus_inactive = themes_path .. "default/titleba
 theme.titlebar_maximized_button_normal_active = themes_path .. "default/titlebar/maximized_normal_active.png"
 theme.titlebar_maximized_button_focus_active = themes_path .. "default/titlebar/maximized_focus_active.png"
 
-theme.wallpaper = "/home/tux/Wallpapers/island-night.png"
+theme.wallpaper = "/home/tux/Wallpapers/green-sun.jpg"
 
 -- You can use your own layout icons like this:
 theme.layout_fairh = themes_path .. "default/layouts/fairhw.png"
