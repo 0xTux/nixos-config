@@ -23,7 +23,7 @@
     useWindowsDriver = true;
   };
 
-  networking.hostName = "wsl";
+  networking.hostName = "sirius";
 
   programs = {
     ssh.startAgent = true;

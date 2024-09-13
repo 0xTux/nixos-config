@@ -103,10 +103,10 @@
         ];
       };
 
-      wsl = nixpkgs.lib.nixosSystem {
+      sirius = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs username;};
         modules = [
-          ./hosts/wsl
+          ./hosts/sirius
 
           home-manager.nixosModules.home-manager
           {
@@ -115,7 +115,7 @@
             home-manager.extraSpecialArgs = {inherit inputs outputs username;};
             home-manager.users.${username} = {
               imports = [
-                ./hosts/wsl/home.nix
+                ./hosts/sirius/home.nix
               ];
             };
           }
