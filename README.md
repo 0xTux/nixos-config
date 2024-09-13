@@ -18,17 +18,18 @@
 - [Pain](#spent-weeks-on-this-system-configuration-)
 
 ## Hosts
-Currently there are 5 host's:
+Currently there are 6 host's:
 1. **canopus:** Asus Zephyrus G15, powered by a Ryzen 9 5900HS and RTX 3060, optimized for productivity on the go.
-2. **wsl:** Multi-monitor desktop running Windows Subsystem for Linux, backed by a Ryzen 5 3600 (bottleneck ik) and RTX 3080 TI. This setup is utilized for both development and gaming.
-3. **controller:** Primary server responsible for exposing my homelab applications to the internet.
+2. **sirius:** Multi-monitor desktop running Windows Subsystem for Linux, backed by a Ryzen 5 3600 (bottleneck ik) and RTX 3080 TI. This setup is utilized for both development and gaming.
+3. **arcturus:** Primary server responsible for exposing my homelab applications to the internet.
    - Headscale
    - Vaultwarden
    - Gitea
-   - Uptime Kuma
    - Grafana, Loki, Promtail
-4. **homelab:** WIP, Migrating from unraid.
-5. **node:** Secondary server dedicated to running Ethereum and BSC nodes. Currently in the process of migrating from Ubuntu.
+  
+4. **alpha:** Monitors uptime and health status of all services across the infrastructure, ensuring reliable performance.
+5. **homelab:** WIP, Migrating from unraid.
+6. **node:** Secondary server dedicated to running Ethereum and BSC nodes. Currently in the process of migrating from Ubuntu.
   
 
 ## Installation
