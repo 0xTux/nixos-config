@@ -120,7 +120,6 @@
         disable_hyprland_logo = true;
         force_default_wallpaper = 0;
         focus_on_activate = true;
-        no_direct_scanout = false;
       };
 
       #-- Output
@@ -146,7 +145,6 @@
         allow_small_split = false;
         special_scale_factor = 0.8;
         mfact = 0.5;
-        new_is_master = false;
         new_on_top = false;
         no_gaps_when_only = false;
         orientation = "left";
@@ -245,7 +243,6 @@
         "SUPER_SHIFT, P, pin,"
         "SUPER_SHIFT, P, exec, ${notifycmd} 'Toggled Pin'"
         "SUPER_SHIFT, S, swapnext"
-        "SUPER_SHIFT, O, toggleopaque"
       ];
 
       binde = [
