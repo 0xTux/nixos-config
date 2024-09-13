@@ -84,6 +84,25 @@
         ];
       };
 
+      alpha = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs outputs username;};
+        modules = [
+          ./hosts/alpha
+
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.backupFileExtension = "backup";
+            home-manager.useUserPackages = true;
+            home-manager.extraSpecialArgs = {inherit inputs outputs username;};
+            home-manager.users.${username} = {
+              imports = [
+                ./hosts/alpha/home.nix
+              ];
+            };
+          }
+        ];
+      };
+
       wsl = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs username;};
         modules = [

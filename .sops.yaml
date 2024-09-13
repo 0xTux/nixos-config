@@ -5,6 +5,7 @@ keys:
   - &hosts
     - &canopus age1cc9phftkzcwaey2rw63m74tyxdjxxzanxphsdrhy6vwlwhgehfzq9rh6e4
     - &controller age1zsl5d4vj6gl3h96y5p53sq5y4vr4vtlwp727h7rp9a4xfkxm53lqrh6r50
+    - &alpha age145uq9emlxqzm3wqauy9zqj78wqx9e6h09xag6wust7jjgn4upfzsaemcvx
     - &wsl age1lyvzg4ud96trsuv6gsvjw0p3rtd6qjpyl9uleq8hcrzwekuhpfesnlqauf
 
 creation_rules:
@@ -14,6 +15,7 @@ creation_rules:
           - *tux
           - *canopus
           - *controller
+          - *alpha
           - *wsl
   - path_regex: hosts/canopus/secrets.yaml$
     key_groups:
@@ -25,6 +27,11 @@ creation_rules:
       - age:
           - *tux
           - *controller
+  - path_regex: hosts/alpha/secrets.yaml$
+    key_groups:
+      - age:
+          - *tux
+          - *alpha
   - path_regex: hosts/wsl/secrets.yaml$
     key_groups:
       - age:
