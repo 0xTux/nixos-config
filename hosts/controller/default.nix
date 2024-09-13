@@ -47,6 +47,10 @@
 
   networking = {
     hostName = "controller";
+    firewall = {
+      enable = true;
+      allowedTCPPorts = [80 443 22];
+    };
   };
 
   security = {

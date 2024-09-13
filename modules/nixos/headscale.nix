@@ -60,6 +60,5 @@
     };
   };
 
-  networking.firewall.allowedTCPPorts = [80 443];
   environment.systemPackages = with pkgs; [headscale];
 }
