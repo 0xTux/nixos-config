@@ -11,6 +11,7 @@
 </p>
 
 ## Table of Contents
+
 - [Hosts](#hosts)
 - [Installation](#installation)
 - [Components](#components)
@@ -18,21 +19,24 @@
 - [Pain](#spent-weeks-on-this-system-configuration-)
 
 ## Hosts
+
 Currently there are 6 host's:
-1. **canopus:** Asus Zephyrus G15, powered by a Ryzen 9 5900HS and RTX 3060, optimized for productivity on the go.
-2. **sirius:** Multi-monitor desktop running Windows Subsystem for Linux, backed by a Ryzen 5 3600 (bottleneck ik) and RTX 3080 TI. This setup is utilized for both development and gaming.
+
+1. **sirius:** Multi-monitor desktop running Windows Subsystem for Linux, backed by a Ryzen 5 3600 (bottleneck ik) and RTX 3080 TI. This setup is utilized for both development and gaming.
+2. **canopus:** Asus Zephyrus G15, powered by a Ryzen 9 5900HS and RTX 3060, optimized for productivity on the go.
 3. **arcturus:** Primary server responsible for exposing my homelab applications to the internet.
+
    - Headscale
    - Vaultwarden
    - Gitea
    - Grafana, Loki, Promtail
-  
+
 4. **alpha:** Monitors uptime and health status of all services across the infrastructure, ensuring reliable performance.
 5. **homelab:** WIP, Migrating from unraid.
 6. **node:** Secondary server dedicated to running Ethereum and BSC nodes. Currently in the process of migrating from Ubuntu.
-  
 
 ## Installation
+
 Hosts can be build with:
 
 ```
@@ -54,26 +58,32 @@ nh os switch -H <HOSTNAME>
 | Editor        | /       | Neovim           |
 
 ## Showcase
+
 ### Desktop
+
 ![2024-08-08_18-33](https://github.com/user-attachments/assets/1cdcc387-0f68-486c-a76c-a36ad2acb78d)
 
 ![2024-08-08_18-18](https://github.com/user-attachments/assets/f3fc4da5-6c0d-4cda-934d-b68ca6494e02)
 
 ### Neovim
+
 ![2024-08-08_18-16](https://github.com/user-attachments/assets/f881c672-8d77-43ec-b637-df5004c7d11f)
 
 ### Floating Terminal
+
 ![2024-08-08_18-16_1](https://github.com/user-attachments/assets/3339ecf8-3264-4179-a093-337c844592a6)
 
 ### Lazygit
+
 ![2024-08-08_18-16_2](https://github.com/user-attachments/assets/6df15881-fc2b-41b1-af3b-124fe0599b94)
 
 ### Telescope
+
 ![2024-08-08_18-16_3](https://github.com/user-attachments/assets/03be05bc-8ede-4d6e-a341-2761d89b7288)
 
 ### Firefox
-![2024-08-08_18-26](https://github.com/user-attachments/assets/6f12173b-2480-404e-b01a-599115a886c0)
 
+![2024-08-08_18-26](https://github.com/user-attachments/assets/6f12173b-2480-404e-b01a-599115a886c0)
 
 ## Spent weeks on this system configuration 😢
 

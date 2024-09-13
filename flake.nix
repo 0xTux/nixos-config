@@ -46,25 +46,6 @@
     # NixOS configuration entrypoint
     # 'nixos-rebuild switch --flake .#your-hostname'
     nixosConfigurations = {
-      canopus = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs outputs username;};
-        modules = [
-          ./hosts/canopus
-
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.backupFileExtension = "backup";
-            home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = {inherit inputs outputs username;};
-            home-manager.users.${username} = {
-              imports = [
-                ./hosts/canopus/home.nix
-              ];
-            };
-          }
-        ];
-      };
-
       arcturus = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs username;};
         modules = [
@@ -78,6 +59,25 @@
             home-manager.users.${username} = {
               imports = [
                 ./hosts/arcturus/home.nix
+              ];
+            };
+          }
+        ];
+      };
+
+      canopus = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs outputs username;};
+        modules = [
+          ./hosts/canopus
+
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.backupFileExtension = "backup";
+            home-manager.useUserPackages = true;
+            home-manager.extraSpecialArgs = {inherit inputs outputs username;};
+            home-manager.users.${username} = {
+              imports = [
+                ./hosts/canopus/home.nix
               ];
             };
           }
