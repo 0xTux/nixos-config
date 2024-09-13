@@ -46,7 +46,8 @@
   };
 
   networking = {
-    hostName = "controller";
+    hostName = "arcturus";
+
     firewall = {
       enable = true;
       allowedTCPPorts = [80 443 22];
@@ -83,7 +84,7 @@
       recommendedTlsSettings = true;
     };
 
-    borgbackup.jobs.controller-backup = {
+    borgbackup.jobs.arcturus-backup = {
       paths = [
         "/var/lib/bitwarden_rs"
         "/var/lib/gitea"
@@ -97,7 +98,7 @@
         passCommand = "cat ${config.sops.secrets.borg_encryption_key.path}";
       };
       environment.BORG_RSH = "ssh -i /home/${username}/.ssh/storagebox";
-      repo = "ssh://u416910@u416910.your-storagebox.de:23/./controller-backups";
+      repo = "ssh://u416910@u416910.your-storagebox.de:23/./arcturus-backups";
       compression = "auto,zstd";
       startAt = "daily";
     };
