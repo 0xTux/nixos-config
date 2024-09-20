@@ -26,6 +26,7 @@ ruled.client.connect_signal("request::rules", function()
         ".blueman-manager-wrapped",
         "Gpick",
         "wezterm-floating",
+        "GalaxyBudsClient",
       },
     },
     properties = {

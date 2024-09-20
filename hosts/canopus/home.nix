@@ -53,5 +53,6 @@
     libreoffice-qt
     spotify
     stremio
+    galaxy-buds-client
   ];
 }
