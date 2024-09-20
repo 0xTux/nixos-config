@@ -27,6 +27,7 @@ ruled.client.connect_signal("request::rules", function()
         "Gpick",
         "wezterm-floating",
         "GalaxyBudsClient",
+        "NoiseTorch",
       },
     },
     properties = {
