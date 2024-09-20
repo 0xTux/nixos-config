@@ -50,6 +50,7 @@
     zip
     unzip
     pciutils
+    ncdu
     gnumake
     nvtopPackages.full
     copyq
