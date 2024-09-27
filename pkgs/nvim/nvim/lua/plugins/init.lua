@@ -26,11 +26,21 @@ local plugins = {
     },
   },
   {
-    "David-Kunz/gen.nvim",
+    "yetone/avante.nvim",
+    event = "VeryLazy",
     lazy = false,
+    version = false,
+    build = "make",
     opts = function()
-      return require("configs.gen")
+      return require("configs.avante")
     end,
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "stevearc/dressing.nvim",
+      "nvim-lua/plenary.nvim",
+      "MunifTanjim/nui.nvim",
+      "nvim-tree/nvim-web-devicons",
+    },
   },
   {
     "Shatur/neovim-session-manager",
