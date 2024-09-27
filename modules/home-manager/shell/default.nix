@@ -13,6 +13,7 @@
         export WINIT_X11_SCALE_FACTOR=1
         bindkey "^A" vi-beginning-of-line
         bindkey "^E" vi-end-of-line
+        PATH=$PATH:~/.cargo/bin:~/.local/bin
       '';
     };
     lazygit.enable = true;
