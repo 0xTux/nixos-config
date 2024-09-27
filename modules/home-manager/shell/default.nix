@@ -64,7 +64,8 @@
     termshark
     sshs
 
-    python311
+    python312
+    python312Packages.pipx
     nodejs
     nodePackages.pnpm
     nodePackages.yarn
