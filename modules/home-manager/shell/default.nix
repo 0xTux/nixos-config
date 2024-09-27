@@ -63,6 +63,7 @@
     atac
     termshark
     sshs
+    solc
 
     python312
     python312Packages.pipx
