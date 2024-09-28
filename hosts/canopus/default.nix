@@ -206,10 +206,6 @@
       enable = true;
       package = pkgs.mullvad-vpn;
     };
-    ollama = {
-      enable = true;
-      acceleration = "cuda";
-    };
   };
 
   fonts.packages = with pkgs; [(nerdfonts.override {fonts = ["FiraCode" "JetBrainsMono"];})];

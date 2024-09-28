@@ -39,13 +39,6 @@
   };
 
   services = {
-    ollama = {
-      enable = true;
-      acceleration = "cuda";
-      openFirewall = true;
-      host = "0.0.0.0";
-      port = 11434;
-    };
     tailscale.enable = true;
   };
 
