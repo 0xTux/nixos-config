@@ -9,6 +9,7 @@
 
     ensureDatabases = [
       "plausible"
+      "wakapi"
     ];
     ensureUsers = [
       {
@@ -23,6 +24,10 @@
       }
       {
         name = "plausible";
+        ensureDBOwnership = true;
+      }
+      {
+        name = "wakapi";
         ensureDBOwnership = true;
       }
     ];

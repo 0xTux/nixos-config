@@ -17,6 +17,7 @@
     ../../modules/nixos/monitoring/promtail.nix
     ../../modules/nixos/ntfy-sh.nix
     ../../modules/nixos/searx.nix
+    ../../modules/nixos/wakapi.nix
   ];
 
   sops.secrets = {
@@ -41,6 +42,10 @@
     };
 
     plausible_key = {
+      sopsFile = ./secrets.yaml;
+    };
+
+    wakapi_salt = {
       sopsFile = ./secrets.yaml;
     };
   };
