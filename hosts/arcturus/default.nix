@@ -78,10 +78,12 @@
 
   services = {
     nginx = {
-      recommendedGzipSettings = true;
-      recommendedOptimisation = true;
-      recommendedProxySettings = true;
       recommendedTlsSettings = true;
+      recommendedBrotliSettings = true;
+      recommendedOptimisation = true;
+      recommendedGzipSettings = true;
+      recommendedProxySettings = true;
+      recommendedZstdSettings = true;
     };
 
     borgbackup.jobs.arcturus-backup = {
