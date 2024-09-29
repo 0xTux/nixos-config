@@ -30,6 +30,10 @@ Currently there are 6 host's:
    - Vaultwarden
    - Gitea
    - Grafana, Loki, Promtail
+   - Ntfy
+   - SearXNG
+   - Plausible
+   - Wakapi
 
 4. **alpha:** Monitors uptime and health status of all services across the infrastructure, ensuring reliable performance.
 5. **homelab:** WIP, Migrating from unraid.
