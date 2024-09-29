@@ -24,9 +24,7 @@
           locations = {
             "/" = {
               proxyPass = "http://localhost:8888";
-              extraConfig = ''
-                proxy_set_header Host $host;
-              '';
+              proxyWebsockets = true;
             };
 
             "/api/live/" = {
