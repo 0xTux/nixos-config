@@ -7,9 +7,11 @@
   imports = [
     ./hardware-configuration.nix
     ../common
+    ../../modules/nixos/postgresql.nix
     ../../modules/nixos/headscale.nix
     ../../modules/nixos/vaultwarden.nix
     ../../modules/nixos/gitea.nix
+    ../../modules/nixos/plausible.nix
     ../../modules/nixos/monitoring/grafana.nix
     ../../modules/nixos/monitoring/loki.nix
     ../../modules/nixos/monitoring/promtail.nix
@@ -31,6 +33,14 @@
     };
 
     "cloudflare_credentials/dns_api_token" = {
+      sopsFile = ./secrets.yaml;
+    };
+
+    plausible_password = {
+      sopsFile = ./secrets.yaml;
+    };
+
+    plausible_key = {
       sopsFile = ./secrets.yaml;
     };
   };
