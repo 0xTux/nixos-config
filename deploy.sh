@@ -1,16 +1,15 @@
 #!/usr/bin/env bash
 export NIX_SSHOPTS="-A"
 
-build_remote=false
-
-hosts="$1"
+hostname=$(hostname)
+target_hosts="$1"
 shift
 
-if [ -z "$hosts" ]; then
+if [ -z "$target_hosts" ]; then
     echo "No hosts to deploy"
     exit 2
 fi
 
-for host in ${hosts//,/ }; do
-  nixos-rebuild --flake .\#$host switch --target-host $host --use-remote-sudo --log-format internal-json -v |& nom --json $@
+for target_host in ${target_hosts//,/ }; do
+  nixos-rebuild switch --flake .#$target_host --target-host $target_host --build-host $hostname --use-remote-sudo --use-substitutes --log-format internal-json -v $@
 done
