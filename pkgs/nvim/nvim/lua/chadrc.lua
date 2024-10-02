@@ -1,21 +1,27 @@
 local M = {}
 
-M.ui = {
-  lsp = {
-    signature = false,
-  },
+M.base46 = {
   theme = "poimandres",
   transparency = true,
-  nvdash = {
-    load_on_startup = true,
+}
 
-    header = {
-      "|------------------------|",
-      "|   NOBODY FUX WITH TUX  |",
-      "|------------------------|",
-      "        \\ (•◡•) /         ",
-      "         \\     /          ",
-    },
+M.lsp = {
+  signature = false,
+}
+
+M.nvdash = {
+  load_on_startup = true,
+
+  header = {
+    "                          ",
+    "                          ",
+    "|------------------------|",
+    "|   NOBODY FUX WITH TUX  |",
+    "|------------------------|",
+    "        \\ (•◡•) /        ",
+    "         \\     /         ",
+    "                          ",
+    "                          ",
   },
 }
 
