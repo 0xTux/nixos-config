@@ -54,5 +54,6 @@
     spotify
     stremio
     galaxy-buds-client
+    mailspring
   ];
 }
