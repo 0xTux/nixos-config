@@ -13,6 +13,7 @@
     ../../modules/home-manager/kdeconnect
     ../../modules/home-manager/vs-code
     ../../modules/home-manager/mopidy
+    ../../modules/home-manager/thunderbird
   ];
 
   home.pointerCursor = {
