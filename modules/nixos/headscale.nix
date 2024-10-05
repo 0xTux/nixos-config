@@ -22,7 +22,7 @@
           base_domain = "tux.rs";
           magic_dns = true;
           nameservers = [
-            "1.1.1.1"
+            "9.9.9.9"
           ];
         };
         server_url = "https://hs.tux.rs";
