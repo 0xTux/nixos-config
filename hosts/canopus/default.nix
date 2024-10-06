@@ -6,7 +6,8 @@
   imports = [
     inputs.nixos-hardware.nixosModules.asus-zephyrus-ga503
     inputs.disko.nixosModules.default
-    (./disko.nix {device = "/dev/nvme0n1";})
+    (import ./disko.nix {device = "/dev/nvme0n1";})
+
     ./hardware-configuration.nix
     ../common
     ../../modules/nixos/desktop
