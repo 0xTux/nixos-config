@@ -57,4 +57,6 @@
     galaxy-buds-client
     mailspring
   ];
+
+  home.stateVersion = "23.11";
 }
