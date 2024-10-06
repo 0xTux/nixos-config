@@ -212,5 +212,5 @@
 
   fonts.packages = with pkgs; [(nerdfonts.override {fonts = ["FiraCode" "JetBrainsMono"];})];
 
-  system.stateVersion = "23.11";
+  system.stateVersion = "24.11";
 }
