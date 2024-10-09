@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  username,
+  ...
+}: {
   imports = [
     ../common/home.nix
     ../../modules/home-manager/awesome
@@ -57,6 +61,28 @@
     galaxy-buds-client
     mailspring
   ];
+
+  home.persistence."/persist/home/${username}" = {
+    directories = [
+      "Downloads"
+      "Music"
+      "Wallpapers"
+      "Documents"
+      "Videos"
+      "Projects"
+      "Stuff"
+      ".mozilla"
+      ".ssh"
+      ".local/share/nvim"
+      ".local/share/Smart\ Code\ ltd"
+    ];
+    files = [
+      ".zsh_history"
+      ".zcompdump"
+      ".wakatime.cfg"
+    ];
+    allowOther = true;
+  };
 
   home.stateVersion = "24.11";
 }

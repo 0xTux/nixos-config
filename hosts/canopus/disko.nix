@@ -27,9 +27,9 @@
                 mountOptions = ["compress=zstd"]; # Compression for better performance
                 mountpoint = "/"; # Root subvolume
               };
-              "/persistent" = {
+              "/persist" = {
                 mountOptions = ["compress=zstd"]; # Compression for persistent data
-                mountpoint = "/persistent"; # Persistent subvolume
+                mountpoint = "/persist"; # Persistent subvolume
               };
               "/nix" = {
                 mountOptions = [

@@ -132,5 +132,9 @@
 
   fonts.packages = with pkgs; [(nerdfonts.override {fonts = ["FiraCode" "JetBrainsMono"];})];
 
+  environment.persistence."/persist" = {
+    enable = false;
+  };
+
   system.stateVersion = "23.11";
 }

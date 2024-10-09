@@ -7,6 +7,7 @@
 }: {
   imports = [
     inputs.nixos-wsl.nixosModules.wsl
+
     ../common
     ../../modules/nixos/virtualisation/docker.nix
   ];
@@ -43,6 +44,10 @@
   };
 
   fonts.packages = with pkgs; [(nerdfonts.override {fonts = ["FiraCode" "JetBrainsMono"];})];
+
+  environment.persistence."/persist" = {
+    enable = false;
+  };
 
   system.stateVersion = "23.11";
 }

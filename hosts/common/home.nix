@@ -1,9 +1,12 @@
 {
   outputs,
   username,
+  inputs,
   ...
 }: {
   imports = [
+    inputs.impermanence.nixosModules.home-manager.impermanence
+
     ../../modules/home-manager/shell
     ../../modules/home-manager/git
     ../../modules/home-manager/starship

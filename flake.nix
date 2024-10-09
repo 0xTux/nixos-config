@@ -27,6 +27,7 @@
     nixpkgs-f2k.url = "github:moni-dz/nixpkgs-f2k";
     nur.url = "github:nix-community/nur";
     sops-nix.url = "github:Mic92/sops-nix";
+    impermanence.url = "github:nix-community/impermanence";
   };
 
   outputs = {
