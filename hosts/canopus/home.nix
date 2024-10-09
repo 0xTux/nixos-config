@@ -76,6 +76,7 @@
       ".local/share/nvim"
       ".local/share/zoxide"
       ".local/share/Smart\ Code\ ltd"
+      ".local/state/lazygit"
     ];
     files = [
       ".zsh_history"
