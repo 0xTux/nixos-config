@@ -32,6 +32,9 @@
       enable = true;
       allowedTCPPorts = [80 443 22 3000 6666 8081];
 
+      # Facilitate firewall punching
+      allowedUDPPorts = [41641];
+
       allowedTCPPortRanges = [
         {
           from = 1714;
