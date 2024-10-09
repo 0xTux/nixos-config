@@ -47,19 +47,14 @@
     telegram-desktop
     anydesk
     rustdesk-flutter
-    vlc
-    darktable
     rawtherapee
     beekeeper-studio
-    gimp
     obs-studio
     flameshot
-    chromium
     libreoffice-qt
     spotify
     stremio
     galaxy-buds-client
-    mailspring
   ];
 
   home.persistence."/persist/home/${username}" = {

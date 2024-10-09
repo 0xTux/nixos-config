@@ -46,24 +46,19 @@
     wget
     portal
     bore-cli
-    fast-cli
-    gdu
     zip
     unzip
     pciutils
-    ncdu
     gnumake
     nvtopPackages.full
     copyq
     zellij
-    cht-sh
     nix-output-monitor
     fzf
     duf
     jq
     atac
     termshark
-    sshs
     solc
 
     python312
@@ -74,8 +69,6 @@
     rustup
     bun
     nixpkgs-fmt
-    flyctl
-    turso-cli
 
     hunspell
     hunspellDicts.en_US
