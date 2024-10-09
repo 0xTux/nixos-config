@@ -68,6 +68,8 @@
       "Stuff"
       ".mozilla"
       ".ssh"
+      ".config/discord"
+      ".config/vencord"
       ".local/share/nvim"
       ".local/share/zoxide"
       ".local/share/Smart\ Code\ ltd"
