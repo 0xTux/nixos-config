@@ -5,13 +5,13 @@
 }: {
   imports = [
     ../common/home.nix
-    ../../modules/home-manager/awesome
-    ../../modules/home-manager/hyprland
-    ../../modules/home-manager/waybar
+    ../../modules/home-manager/desktop/awesome
+    ../../modules/home-manager/desktop/hyprland
+    ../../modules/home-manager/desktop/waybar
     ../../modules/home-manager/picom
     ../../modules/home-manager/alacritty
     ../../modules/home-manager/wezterm
-    ../../modules/home-manager/rofi
+    ../../modules/home-manager/desktop/rofi
     ../../modules/home-manager/barrier
     ../../modules/home-manager/firefox
     ../../modules/home-manager/kdeconnect
