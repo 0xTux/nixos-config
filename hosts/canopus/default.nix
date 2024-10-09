@@ -2,6 +2,7 @@
   inputs,
   pkgs,
   lib,
+  config,
   ...
 }: {
   imports = [
@@ -30,6 +31,7 @@
     firewall = {
       enable = true;
       allowedTCPPorts = [80 443 22 3000 6666 8081];
+
       allowedTCPPortRanges = [
         {
           from = 1714;
@@ -46,6 +48,14 @@
   };
 
   boot = {
+    plymouth = {
+      enable = true;
+      theme = "spinner-monochrome";
+      themePackages = [
+        (pkgs.plymouth-spinner-monochrome.override {inherit (config.boot.plymouth) logo;})
+      ];
+    };
+
     kernelPackages = pkgs.linuxPackages_zen;
     supportedFilesystems = ["ntfs"];
 
@@ -242,7 +252,10 @@
     gvfs.enable = true;
     tumbler.enable = true;
     gnome.gnome-keyring.enable = true;
-    tailscale.enable = true;
+    tailscale = {
+      enable = true;
+      extraUpFlags = ["--login-server https://hs.tux.rs"];
+    };
     mullvad-vpn = {
       enable = true;
       package = pkgs.mullvad-vpn;
