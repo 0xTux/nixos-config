@@ -39,10 +39,6 @@
     dconf.enable = true;
   };
 
-  services = {
-    tailscale.enable = true;
-  };
-
   fonts.packages = with pkgs; [(nerdfonts.override {fonts = ["FiraCode" "JetBrainsMono"];})];
 
   environment.persistence."/persist" = {
