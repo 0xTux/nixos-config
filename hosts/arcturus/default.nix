@@ -18,6 +18,7 @@
     ../../modules/nixos/ntfy-sh.nix
     ../../modules/nixos/searx.nix
     ../../modules/nixos/wakapi.nix
+    ../../modules/nixos/nextcloud.nix
   ];
 
   sops.secrets = {
@@ -47,6 +48,11 @@
 
     wakapi_salt = {
       sopsFile = ./secrets.yaml;
+    };
+
+    nextcloud_password = {
+      sopsFile = ./secrets.yaml;
+      owner = "nextcloud";
     };
   };
 
