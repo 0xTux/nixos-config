@@ -127,6 +127,25 @@
         ];
       };
 
+      vega = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs outputs username;};
+        modules = [
+          ./hosts/vega
+
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.backupFileExtension = "backup";
+            home-manager.useUserPackages = true;
+            home-manager.extraSpecialArgs = {inherit inputs outputs username;};
+            home-manager.users.${username} = {
+              imports = [
+                ./hosts/vega/home.nix
+              ];
+            };
+          }
+        ];
+      };
+
       isoImage = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs username;};
         modules = [
