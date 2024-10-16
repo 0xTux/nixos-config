@@ -12,6 +12,8 @@
     ../../modules/nixos/virtualisation/docker.nix
   ];
 
+  boot.binfmt.emulatedSystems = ["aarch64-linux"];
+
   nixpkgs = {
     config.cudaSupport = true;
     hostPlatform = "x86_64-linux";
