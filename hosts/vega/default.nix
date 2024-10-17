@@ -4,6 +4,7 @@
     ../common
 
     ../../modules/nixos/adguard.nix
+    ../../modules/nixos/rustdesk-server.nix
   ];
 
   boot.initrd.availableKernelModules = [
