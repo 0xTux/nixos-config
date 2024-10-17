@@ -1,4 +1,4 @@
-{...}: {
+{pkgs, ...}: {
   imports = [
     ./hardware-configuration.nix
     ../common
@@ -43,6 +43,8 @@
       extraUpFlags = ["--login-server https://hs.tux.rs"];
     };
   };
+
+  environment.systemPackages = with pkgs; [go-wol];
 
   environment.persistence."/persist" = {
     enable = false;
