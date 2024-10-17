@@ -51,7 +51,6 @@
     pciutils
     gnumake
     nvtopPackages.full
-    copyq
     zellij
     nix-output-monitor
     fzf

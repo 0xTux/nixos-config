@@ -55,6 +55,7 @@
     spotify
     stremio
     galaxy-buds-client
+    copyq
   ];
 
   home.persistence."/persist/home/${username}" = {
