@@ -2,6 +2,8 @@
   imports = [
     ./hardware-configuration.nix
     ../common
+
+    ../../modules/nixos/adguard.nix
   ];
 
   boot.initrd.availableKernelModules = [
