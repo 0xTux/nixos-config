@@ -146,6 +146,25 @@
         ];
       };
 
+      vps = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs outputs username;};
+        modules = [
+          ./hosts/vps
+
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.backupFileExtension = "backup";
+            home-manager.useUserPackages = true;
+            home-manager.extraSpecialArgs = {inherit inputs outputs username;};
+            home-manager.users.${username} = {
+              imports = [
+                ./hosts/vps/home.nix
+              ];
+            };
+          }
+        ];
+      };
+
       isoImage = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs username;};
         modules = [
