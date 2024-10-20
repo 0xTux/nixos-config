@@ -26,6 +26,7 @@
 ☁️ | VPS | arcturus | 4 Core - 8 GB RAM | Primary server responsible for exposing my homelab applications to the internet.
 🥔 | VPS | alpha | 2 Core - 4 GB RAM | Monitors uptime and health status of all services across the infrastructure.
 🥔 | Server | vega | Cortex A53 - 1 GB RAM | Running AdGuard Home for network-wide ad blocking.
+☁️ | VPS | capella | 4 Core - 6 GB RAM | For running Minecraft, CS 2, Rust game servers.
 🖥️ | Server | homelab | Ryzen 7 2700X - 32 GB RAM - 2060 Super | WIP, Migrating from unraid.
 ☁️ | VPS | node | i9-13900 - 64 GB RAM | Running Ethereum and BSC nodes. Currently in the process of migrating from Ubuntu.
 
