@@ -146,6 +146,25 @@
         ];
       };
 
+      capella = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs outputs username;};
+        modules = [
+          ./hosts/capella
+
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.backupFileExtension = "backup";
+            home-manager.useUserPackages = true;
+            home-manager.extraSpecialArgs = {inherit inputs outputs username;};
+            home-manager.users.${username} = {
+              imports = [
+                ./hosts/capella/home.nix
+              ];
+            };
+          }
+        ];
+      };
+
       vps = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs username;};
         modules = [

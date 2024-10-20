@@ -8,6 +8,7 @@ keys:
     - &alpha age145uq9emlxqzm3wqauy9zqj78wqx9e6h09xag6wust7jjgn4upfzsaemcvx
     - &sirius age15d06qpn64p3w57l8yhdesdr5g69dtncwq8yrkx2uw0szql3p7fsq4awlka
     - &vega age1ydkclhk9kwqdq74utesqdfupt43lz64d5k65gz2z9uyljcqq9fcq3hv28l
+    - &capella age1y4luzn2jls7rvgphej23srvdlx563lxq29tvf66vhwwzaf7c3f3qzvresh
 
 creation_rules:
   - path_regex: hosts/common/secrets.yaml$
@@ -19,6 +20,7 @@ creation_rules:
           - *alpha
           - *sirius
           - *vega
+          - *capella
   - path_regex: hosts/canopus/secrets.yaml$
     key_groups:
       - age:
