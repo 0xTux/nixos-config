@@ -11,6 +11,7 @@
     (import ./disko.nix {device = "/dev/sda";})
 
     ../common
+    ../../modules/nixos/virtualisation/docker.nix
   ];
 
   nixpkgs.hostPlatform = "x86_64-linux";
