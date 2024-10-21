@@ -4,7 +4,6 @@
   ...
 }: {
   imports = [
-    ../common/home.nix
     ../../modules/home-manager/desktop/awesome
     ../../modules/home-manager/desktop/hyprland
     ../../modules/home-manager/desktop/waybar
