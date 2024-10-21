@@ -185,6 +185,13 @@
       lidSwitchExternalPower = "suspend";
     };
 
+    xrdp = {
+      enable = true;
+      openFirewall = true;
+      defaultWindowManager = "awesome";
+      audio.enable = true;
+    };
+
     syncthing = {
       enable = true;
       user = "tux";
