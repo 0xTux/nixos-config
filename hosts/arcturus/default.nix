@@ -142,5 +142,11 @@
     enable = false;
   };
 
+  home-manager.users.${username} = {
+    imports = [
+      ./home.nix
+    ];
+  };
+
   system.stateVersion = "23.11";
 }

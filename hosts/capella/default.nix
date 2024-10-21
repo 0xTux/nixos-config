@@ -1,6 +1,7 @@
 {
   modulesPath,
   inputs,
+  username,
   ...
 }: {
   imports = [
@@ -26,6 +27,12 @@
 
   environment.persistence."/persist" = {
     enable = false;
+  };
+
+  home-manager.users.${username} = {
+    imports = [
+      ./home.nix
+    ];
   };
 
   system.stateVersion = "24.11";

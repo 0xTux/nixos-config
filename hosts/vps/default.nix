@@ -10,6 +10,7 @@
     (modulesPath + "/installer/scan/not-detected.nix")
     (modulesPath + "/profiles/qemu-guest.nix")
     inputs.disko.nixosModules.default
+    inputs.home-manager.nixosModules.home-manager
     (import ./disko.nix {device = "/dev/sda";})
   ];
 
@@ -112,6 +113,12 @@
         ''ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL+OzPUe2ECPC929DqpkM39tl/vdNAXfsRnmrGfR+X3D 0xtux@pm.me''
       ];
     };
+  };
+
+  home-manager.users.${username} = {
+    imports = [
+      ./home.nix
+    ];
   };
 
   system.stateVersion = "24.11";

@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  username,
+  ...
+}: {
   imports = [
     ./hardware-configuration.nix
     ../common
@@ -49,6 +53,12 @@
 
   environment.persistence."/persist" = {
     enable = false;
+  };
+
+  home-manager.users.${username} = {
+    imports = [
+      ./home.nix
+    ];
   };
 
   system.stateVersion = "24.11";

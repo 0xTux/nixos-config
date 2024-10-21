@@ -1,10 +1,14 @@
 {
   pkgs,
   modulesPath,
+  inputs,
+  username,
   ...
 }: {
   imports = [
     "${modulesPath}/installer/cd-dvd/installation-cd-minimal.nix"
+    inputs.home-manager.nixosModules.home-manager
+
     ../../modules/nixos/default.nix
     ../../modules/nixos/desktop/awesome
   ];
@@ -71,6 +75,12 @@
   };
 
   fonts.packages = with pkgs; [(nerdfonts.override {fonts = ["FiraCode" "JetBrainsMono"];})];
+
+  home-manager.users.${username} = {
+    imports = [
+      ./home.nix
+    ];
+  };
 
   system.stateVersion = "23.11";
 }

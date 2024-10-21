@@ -53,154 +53,42 @@
     nixosConfigurations = {
       arcturus = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs username;};
-        modules = [
-          ./hosts/arcturus
-
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.backupFileExtension = "backup";
-            home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = {inherit inputs outputs username;};
-            home-manager.users.${username} = {
-              imports = [
-                ./hosts/arcturus/home.nix
-              ];
-            };
-          }
-        ];
+        modules = [./hosts/arcturus];
       };
 
       canopus = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs username;};
-        modules = [
-          ./hosts/canopus
-
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.backupFileExtension = "backup";
-            home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = {inherit inputs outputs username;};
-            home-manager.users.${username} = {
-              imports = [
-                ./hosts/canopus/home.nix
-              ];
-            };
-          }
-        ];
+        modules = [./hosts/canopus];
       };
 
       alpha = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs username;};
-        modules = [
-          ./hosts/alpha
-
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.backupFileExtension = "backup";
-            home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = {inherit inputs outputs username;};
-            home-manager.users.${username} = {
-              imports = [
-                ./hosts/alpha/home.nix
-              ];
-            };
-          }
-        ];
+        modules = [./hosts/alpha];
       };
 
       sirius = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs username;};
-        modules = [
-          ./hosts/sirius
-
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.backupFileExtension = "backup";
-            home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = {inherit inputs outputs username;};
-            home-manager.users.${username} = {
-              imports = [
-                ./hosts/sirius/home.nix
-              ];
-            };
-          }
-        ];
+        modules = [./hosts/sirius];
       };
 
       vega = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs username;};
-        modules = [
-          ./hosts/vega
-
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.backupFileExtension = "backup";
-            home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = {inherit inputs outputs username;};
-            home-manager.users.${username} = {
-              imports = [
-                ./hosts/vega/home.nix
-              ];
-            };
-          }
-        ];
+        modules = [./hosts/vega];
       };
 
       capella = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs username;};
-        modules = [
-          ./hosts/capella
-
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.backupFileExtension = "backup";
-            home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = {inherit inputs outputs username;};
-            home-manager.users.${username} = {
-              imports = [
-                ./hosts/capella/home.nix
-              ];
-            };
-          }
-        ];
+        modules = [./hosts/capella];
       };
 
       vps = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs username;};
-        modules = [
-          ./hosts/vps
-
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.backupFileExtension = "backup";
-            home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = {inherit inputs outputs username;};
-            home-manager.users.${username} = {
-              imports = [
-                ./hosts/vps/home.nix
-              ];
-            };
-          }
-        ];
+        modules = [./hosts/vps];
       };
 
       isoImage = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs username;};
-        modules = [
-          ./hosts/isoImage
-
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.backupFileExtension = "backup";
-            home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = {inherit inputs outputs username;};
-            home-manager.users.${username} = {
-              imports = [
-                ./hosts/isoImage/home.nix
-              ];
-            };
-          }
-        ];
+        modules = [./hosts/isoImage];
       };
     };
 
