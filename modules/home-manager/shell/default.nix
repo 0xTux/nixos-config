@@ -59,6 +59,7 @@
     atac
     termshark
     solc
+    dig
 
     python312
     python312Packages.pipx
