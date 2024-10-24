@@ -68,12 +68,14 @@
       "Stuff"
       ".mozilla"
       ".ssh"
+      ".config/copyq"
       ".config/discord"
-      ".config/vencord"
+      ".config/Vencord"
       ".local/share/nvim"
       ".local/share/zoxide"
       ".local/share/Smart\ Code\ ltd"
       ".local/state/lazygit"
+      ".cache/spotify"
     ];
     files = [
       ".zsh_history"
