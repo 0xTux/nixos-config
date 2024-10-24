@@ -35,6 +35,7 @@ awful.keyboard.append_global_keybindings({
   end, { description = "open floating terminal", group = "launcher" }),
 
   awful.key({ modkey }, "v", function()
+  awful.key({ modkey }, "e", function()
     awful.spawn(apps.editor_cmd)
   end, { description = "open neovim", group = "launcher" }),
 
