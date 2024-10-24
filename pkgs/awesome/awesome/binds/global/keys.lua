@@ -34,7 +34,6 @@ awful.keyboard.append_global_keybindings({
     awful.spawn(apps.terminal_floating)
   end, { description = "open floating terminal", group = "launcher" }),
 
-  awful.key({ modkey }, "v", function()
   awful.key({ modkey }, "e", function()
     awful.spawn(apps.editor_cmd)
   end, { description = "open neovim", group = "launcher" }),
@@ -127,4 +126,36 @@ awful.keyboard.append_global_keybindings({
       end
     end,
   }),
+
+  -- Keyboard brightness related keybindings.
+  awful.key({}, "XF86KbdBrightnessUp", function()
+    awful.spawn("asusctl -n")
+  end, { description = "increase keyboard brightness", group = "system" }),
+  awful.key({}, "XF86KbdBrightnessDown", function()
+    awful.spawn("asusctl -p")
+  end, { description = "decrease keyboard brightness", group = "system" }),
+
+  -- Screen brightness related keybindings.
+  awful.key({}, "XF86MonBrightnessUp", function()
+    awful.spawn("brightnessctl s +20%")
+  end, { description = "increase screen brightness", group = "system" }),
+  awful.key({}, "XF86MonBrightnessDown", function()
+    awful.spawn("brightnessctl s 20%-")
+  end, { description = "decrease screen brightness", group = "system" }),
+
+  -- Performance related keybindings.
+  awful.key({}, "XF86Launch4", function()
+    awful.spawn("asusctl profile -n")
+  end, { description = "cycle through performance mode", group = "system" }),
+
+  -- Volume related keybindings.
+  awful.key({}, "XF86AudioRaiseVolume", function()
+    awful.spawn("amixer sset Master 10%+")
+  end, { description = "increase speaker volume", group = "system" }),
+  awful.key({}, "XF86AudioLowerVolume", function()
+    awful.spawn("amixer sset Master 10%-")
+  end, { description = "decrease speaker volume", group = "system" }),
+  awful.key({}, "XF86AudioMute", function()
+    awful.spawn("amixer sset Master 1+ toggle")
+  end, { description = "toggle speaker mute", group = "system" }),
 })
