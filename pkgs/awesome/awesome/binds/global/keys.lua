@@ -59,6 +59,10 @@ awful.keyboard.append_global_keybindings({
     awful.spawn("spotify")
   end, { description = "open spotify", group = "launcher" }),
 
+  awful.key({ modkey }, "v", function()
+    awful.spawn("copyq show")
+  end, { description = "open clipboard manager", group = "launcher" }),
+
   -- Focus related keybindings.
   awful.key({ modkey }, "Left", function()
     awful.client.focus.bydirection("left")
